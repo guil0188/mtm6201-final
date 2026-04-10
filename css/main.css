@@ -50,3 +50,18 @@ table {
 /**********************
         MINE 
 ***********************/
+:root{
+	--background-color: #F9CEAA;
+	--cards-color: #A3C4E6;
+	--button-color: #E6A27A;
+	--header-color: #0A177F; 
+	--content-background: #F1DFD0;
+	--footer-background: #4B88BB;
+	--headers-buttons-font: 'Super Dream', sans-serif;
+	--text-font: 'Sunflower', sans-serif ;
+}
+
+
+body{
+	background-color: var(--background-color);
+}
