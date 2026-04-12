@@ -65,3 +65,6 @@ table {
 body{
 	background-color: var(--background-color);
 }
+.footer-container{
+	background-color: var(--footer-background);
+}
