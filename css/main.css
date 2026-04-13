@@ -64,6 +64,9 @@ table {
 
 body{
 	background-color: var(--background-color);
+	font-family: var(--text-font);
+	line-height: 1.5;
+	color: #222;
 }
 .footer-container{
 	background-color: var(--footer-background);
@@ -71,6 +74,52 @@ body{
 
 .site-header {
 	background-color: var(--content-background);
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+main section {
+  padding: 2rem 1rem;
+}
+
+.section-header {
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--headers-buttons-font);
+  color: var(--header-color);
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+p,
+label,
+input,
+textarea,
+a,
+button {
+  font-family: var(--text-font);
 }
 	
 /**************** 
