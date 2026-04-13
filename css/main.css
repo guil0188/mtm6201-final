@@ -3,19 +3,87 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
 	margin: 0;
 	padding: 0;
 	border: 0;
@@ -23,25 +91,44 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
 	display: block;
 }
+
 body {
 	line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
 	list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
 	quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
 	content: '';
 	content: none;
 }
+
 table {
 	border-collapse: collapse;
 	border-spacing: 0;
@@ -50,22 +137,23 @@ table {
 /**********************
         MINE 
 ***********************/
-:root{
+:root {
 	--background-color: #F9CEAA;
 	--cards-color: #A3C4E6;
 	--button-color: #E6A27A;
-	--header-color: #0A177F; 
+	--header-color: #0A177F;
 	--content-background: #F1DFD0;
 	--footer-background: #4B88BB;
 	--headers-buttons-font: 'Super Dream', sans-serif;
-	--text-font: 'Sunflower', sans-serif ;
+	--text-font: 'Sunflower', sans-serif;
 	--impact-card-color: #5698D1;
 }
+
 /***********************************
 	General Styling for all pages
 ***********************************/
 
-body{
+body {
 	background-color: var(--background-color);
 	font-family: var(--text-font);
 	line-height: 1.5;
@@ -73,94 +161,103 @@ body{
 }
 
 img {
-  max-width: 100%;
-  display: block;
+	max-width: 100%;
+	display: block;
 }
 
 a {
-  text-decoration: none;
-  color: inherit;
+	text-decoration: none;
+	color: inherit;
 }
 
 main section {
-  padding: 2rem 1rem;
+	padding: 2rem 1rem;
 }
 
 .section-header {
-  margin-bottom: 1rem;
+	margin-bottom: 1rem;
 }
 
 h1,
 h2,
 h3,
 h4 {
-  font-family: var(--headers-buttons-font);
-  color: var(--header-color);
+	font-family: var(--headers-buttons-font);
+	color: var(--header-color);
 }
 
 h1 {
-  font-size: 2rem;
+	font-size: 2rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+	font-size: 1.75rem;
 }
 
 h3 {
-  font-size: 1.4rem;
+	font-size: 1.4rem;
 }
 
 p,
 label,
 input,
-textarea{
-  font-family: var(--text-font);
+textarea {
+	font-family: var(--text-font);
 }
+
 a,
 button {
-  font-family: inherit;
+	font-family: inherit;
 }
+
 /****************
 	Header
 *****************/
-.site-header{
+.site-header {
 	background-color: var(--content-background);
 	padding: 1rem;
 }
-.header-top{
+
+.header-top {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 }
-.logo img{
+
+.logo img {
 	width: 120px;
 }
-.menu-toggle{
+
+.menu-toggle {
 	background: none;
 	border: none;
 	color: var(--header-color);
 	cursor: pointer;
 	padding: 0;
 }
-.menu-toggle span{
+
+.menu-toggle span {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 3rem;
 	line-height: 1;
 }
 
-.site-nav{
+.site-nav {
 	display: none;
 	margin-top: 1rem;
 }
+
 .site-nav.nav-open {
 	display: block;
 }
-.site-nav ul{
+
+.site-nav ul {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 }
-.site-nav a{
+
+.site-nav a {
 	color: var(--header-color);
 	font-family: var(--headers-buttons-font);
 	font-size: 1.5rem;
@@ -169,7 +266,8 @@ button {
 /*********************
 	Button Styling
 **********************/
-.button-link, button{
+.button-link,
+button {
 	display: inline-block;
 	background-color: var(--button-color);
 	color: #ffffff;
@@ -184,63 +282,64 @@ button {
 	Footer
 *****************/
 .site-footer {
-  margin-top: 3rem;
+	margin-top: 3rem;
 }
 
 .footer-container {
-  background-color: var(--footer-background);
-  padding: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 1rem;
+	background-color: var(--footer-background);
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 1rem;
 }
 
 .footer-left,
 .footer-middle-right {
-  flex-shrink: 0;
+	flex-shrink: 0;
 }
 
 .footer-left img,
 .footer-middle-right img {
-  width: 42px;
+	width: 42px;
 }
 
 .footer-links {
-  display: flex;
-  gap: 1.5rem;
-  flex-grow: 1;
-  justify-content: center;
+	display: flex;
+	gap: 1.5rem;
+	flex-grow: 1;
+	justify-content: center;
 }
 
 .footer-links ul {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
 }
 
 .footer-links a {
-  color: white;
-  font-size: 0.95rem;
+	color: white;
+	font-size: 0.95rem;
 }
 
 .footer-right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-shrink: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex-shrink: 0;
 }
 
 .footer-logo {
-  width: 55px;
-  margin-bottom: 0.5rem;
+	width: 55px;
+	margin-bottom: 0.5rem;
 }
 
 .footer-right p {
-  color: white;
-  font-size: 0.85rem;
-  text-align: center;
+	color: white;
+	font-size: 0.85rem;
+	text-align: center;
 }
+
 /***********************************
 	Home Page
 ***********************************/
@@ -249,226 +348,226 @@ button {
 	Hero Section
 *****************/
 .hero {
-  padding: 0;
+	padding: 0;
 }
 
 .hero-image {
-  width: 100%;
+	width: 100%;
 }
 
 .hero-image img {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 
 .hero-text-block {
-  background-color: var(--content-background);
-  padding: 1rem 1rem 1.25rem;
+	background-color: var(--content-background);
+	padding: 1rem 1rem 1.25rem;
 }
 
 .hero .section-header {
-  margin-bottom: 0.75rem;
+	margin-bottom: 0.75rem;
 }
 
 .hero h1 {
-  font-size: 2.5rem;
-  line-height: 1.2;
-  text-align: left;
-  max-width: 100%;
+	font-size: 2.5rem;
+	line-height: 1.2;
+	text-align: left;
+	max-width: 100%;
 }
 
 .hero-content {
-  background: none;
-  max-width: none;
-  margin: 0;
+	background: none;
+	max-width: none;
+	margin: 0;
 }
 
 .hero-content p {
-  font-size: 1rem;
-  line-height: 1.45;
-  text-align: left;
-  margin-bottom: 1.25rem;
+	font-size: 1rem;
+	line-height: 1.45;
+	text-align: left;
+	margin-bottom: 1.25rem;
 }
 
 .hero-action {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
 }
 
 .hero .button-link {
-  padding: 0.9rem 1.6rem;
-  border-radius: 1rem;
-  font-size: 1rem;
+	padding: 0.9rem 1.6rem;
+	border-radius: 1rem;
+	font-size: 1rem;
 }
 
 .hero-paw {
-  width: 52px;
-  flex-shrink: 0;
+	width: 52px;
+	flex-shrink: 0;
 }
 
 /****************
 	Featured Pets
 *****************/
 .featured-pets {
-  padding: 1.5rem 0 2rem;
+	padding: 1.5rem 0 2rem;
 }
 
 .featured-pets .section-header {
-  text-align: center;
-  margin-bottom: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .featured-pets h2 {
-  font-size: 2.3rem;
+	font-size: 2.3rem;
 }
 
 .featured-pets-content.container {
-  padding-left: 0.75rem;
-  padding-right: 0.75rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
 }
 
 .featured-pets-content .row {
-  row-gap: 1rem;
+	row-gap: 1rem;
 }
 
 .pet-card {
-  background-color: var(--cards-color);
-  border-radius: 0.25rem;
-  padding: 0.9rem;
-  text-align: left;
+	background-color: var(--cards-color);
+	border-radius: 0.25rem;
+	padding: 0.9rem;
+	text-align: left;
 }
 
 .pet-card img:first-child {
-  width: 100%;
-  height: auto;
-  margin-bottom: 0.75rem;
-  border-radius: 5px;
+	width: 100%;
+	height: auto;
+	margin-bottom: 0.75rem;
+	border-radius: 5px;
 }
 
 .pet-name {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  margin-bottom: 0.4rem;
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	margin-bottom: 0.4rem;
 }
 
 .pet-name h3 {
-  margin: 0;
-  font-size: 1.9rem;
-  line-height: 1;
-  color: #000;
-  font-family: var(--text-font);
-  font-weight: 700;
+	margin: 0;
+	font-size: 1.9rem;
+	line-height: 1;
+	color: #000;
+	font-family: var(--text-font);
+	font-weight: 700;
 }
 
 .pet-paw {
-  width: 26px;
-  flex-shrink: 0;
+	width: 26px;
+	flex-shrink: 0;
 }
 
 .pet-card p {
-  font-size: 0.95rem;
-  line-height: 1.35;
-  margin-bottom: 0.9rem;
+	font-size: 0.95rem;
+	line-height: 1.35;
+	margin-bottom: 0.9rem;
 }
 
 .pet-card .button-link {
-  color: white !important;
-  padding: 0.45rem 0.9rem;
-  border-radius: 0.55rem;
-  font-size: 0.95rem;
+	color: white !important;
+	padding: 0.45rem 0.9rem;
+	border-radius: 0.55rem;
+	font-size: 0.95rem;
 }
 
 /****************
 	Volunteer Section
 *****************/
 .volunteer-section {
-  padding: 1.5rem 1rem;
+	padding: 1.5rem 1rem;
 }
 
 .volunteer-section .section-header {
-  text-align: center;
-  margin-bottom: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .volunteer-section h2 {
-  font-size: 2.3rem;
+	font-size: 2.3rem;
 }
 
 .volunteer-content {
-  background-color: var(--content-background);
-  border-radius: 0.35rem;
-  padding: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	background-color: var(--content-background);
+	border-radius: 0.35rem;
+	padding: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .volunteer-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 5px;
+	width: 100%;
+	height: auto;
+	border-radius: 5px;
 }
 
 .volunteer-text p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  text-align: left;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	margin-bottom: 1rem;
+	text-align: left;
 }
 
 .volunteer-text .button-link {
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 0.55rem;
-  font-size: 0.95rem;
+	color: white !important;
+	padding: 0.5rem 1rem;
+	border-radius: 0.55rem;
+	font-size: 0.95rem;
 }
 
 /****************
 	About Shelter Section
 *****************/
 .about-shelter {
-  padding: 1.5rem 1rem 2rem;
+	padding: 1.5rem 1rem 2rem;
 }
 
 .about-shelter .section-header {
-  text-align: center;
-  margin-bottom: 1rem;
+	text-align: center;
+	margin-bottom: 1rem;
 }
 
 .about-shelter h2 {
-  font-size: 2.3rem;
+	font-size: 2.3rem;
 }
 
 .about-content {
-  background-color: var(--content-background);
-  border-radius: 0.35rem;
-  padding: 0.9rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	background-color: var(--content-background);
+	border-radius: 0.35rem;
+	padding: 0.9rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .about-content img {
-  width: 100%;
-  height: auto;
-  border-radius: 20px;
+	width: 100%;
+	height: auto;
+	border-radius: 20px;
 }
 
 .about-text p {
-  font-size: 0.95rem;
-  line-height: 1.4;
-  margin-bottom: 1rem;
-  text-align: left;
+	font-size: 0.95rem;
+	line-height: 1.4;
+	margin-bottom: 1rem;
+	text-align: left;
 }
 
 .about-text .button-link {
-  color: white !important;
-  padding: 0.5rem 1rem;
-  border-radius: 0.55rem;
-  font-size: 0.95rem;
+	color: white !important;
+	padding: 0.5rem 1rem;
+	border-radius: 0.55rem;
+	font-size: 0.95rem;
 }
 
 /***********************************
@@ -479,119 +578,123 @@ button {
 	About Hero
 *****************/
 .about-hero {
-  position: relative;
-  padding: 0;
+	position: relative;
+	padding: 0;
 }
 
 .about-hero img {
-  width: 100%;
-  display: block;
+	width: 100%;
+	display: block;
 }
 
 .about-hero-overlay {
-  position: absolute;
-  left: 50%;
-  top: 45%;
-  transform: translate(-50%, -50%);
-  background-color: rgba(241, 223, 208, 0.8);
-  padding: 1rem 1.5rem;
-  border-radius: 1rem;
-  width: 75%;
-  text-align: center;
+	position: absolute;
+	left: 50%;
+	top: 45%;
+	transform: translate(-50%, -50%);
+	background-color: rgba(241, 223, 208, 0.8);
+	padding: 1rem 1.5rem;
+	border-radius: 1rem;
+	width: 75%;
+	text-align: center;
 }
 
 .about-hero-overlay h1 {
-  font-size: 3rem;
-  line-height: 1.1;
-  margin: 0;
+	font-size: 3rem;
+	line-height: 1.1;
+	margin: 0;
 }
 
 /****************
 	Our Story
 *****************/
 .our-story {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  padding-bottom: 0;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-bottom: 0;
 }
 
 .our-story .section-header {
-  margin-bottom: 0;
-  text-align: center;
+	margin-bottom: 0;
+	text-align: center;
 }
+
 .our-story h2 {
-  font-size: 2.5rem;
-  line-height: 1.05;
+	font-size: 2.5rem;
+	line-height: 1.05;
 }
 
 .story-content {
-  background-color: var(--content-background);
-  border-radius: 0.6rem;
-  padding: 0.95rem 1.1rem 1.05rem;
-  width: 100%;
+	background-color: var(--content-background);
+	border-radius: 0.6rem;
+	padding: 0.95rem 1.1rem 1.05rem;
+	width: 100%;
 }
 
 .story-content p {
-  font-size: 1rem;
-  line-height: 1.45;
-  text-align: left;
-  margin: 0;
+	font-size: 1rem;
+	line-height: 1.45;
+	text-align: left;
+	margin: 0;
 }
 
 /****************
 	Our Mission
 *****************/
 .our-mission {
-  padding-left: 0.6rem;
-  padding-right: 0.6rem;
-  padding-top: 1rem;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	padding-top: 1rem;
 }
 
 .our-mission .section-header {
-  margin-bottom: 0;
-  text-align: center;
+	margin-bottom: 0;
+	text-align: center;
 }
+
 .our-mission h2 {
-  font-size: 2.5rem;
-  line-height: 1.05;
+	font-size: 2.5rem;
+	line-height: 1.05;
 }
+
 .mission-content {
-  background-color: var(--content-background);
-  border-radius: 0.6rem;
-  padding: 0.95rem 1.1rem 1.05rem;
-  width: 100%;
+	background-color: var(--content-background);
+	border-radius: 0.6rem;
+	padding: 0.95rem 1.1rem 1.05rem;
+	width: 100%;
 }
 
 .mission-content p {
-  font-size: 1rem;
-  line-height: 1.45;
-  text-align: left;
+	font-size: 1rem;
+	line-height: 1.45;
+	text-align: left;
 }
+
 /****************
 	Our Impact
 *****************/
 
 .our-impact {
-  padding: 1rem 1rem 2rem;
+	padding: 1rem 1rem 2rem;
 }
 
 .our-impact .section-header {
-  text-align: center;
-  margin-bottom: 1.2rem;
+	text-align: center;
+	margin-bottom: 1.2rem;
 }
 
 .our-impact h2 {
-  font-size: 2.6rem;
+	font-size: 2.6rem;
 }
 
 /* remove bootstrap spacing issues */
 .impact-stats.container {
-  padding-left: 0;
-  padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .impact-stats .row {
-  row-gap: 1.2rem;
+	row-gap: 1.2rem;
 }
 
 /***************
@@ -599,17 +702,17 @@ button {
 ****************/
 
 .impact-card {
-  padding: 0;
+	padding: 0;
 }
 
 /* oval shape */
 .impact-inner {
-  background-color: var(--impact-card-color);
-  border-radius: 999px;
-  padding: 1.2rem 1.4rem;
-  display: flex;
-  align-items: center;
-  position: relative;
+	background-color: var(--impact-card-color);
+	border-radius: 999px;
+	padding: 1.2rem 1.4rem;
+	display: flex;
+	align-items: center;
+	position: relative;
 }
 
 /***************
@@ -617,9 +720,9 @@ button {
 ****************/
 
 .impact-icon {
-  width: 40px;
-  position: absolute;
-  left: 1.5rem;
+	width: 40px;
+	position: absolute;
+	left: 1.5rem;
 }
 
 /***************
@@ -627,22 +730,22 @@ button {
 ****************/
 
 .impact-text {
-  width: 100%;
-  text-align: center;
+	width: 100%;
+	text-align: center;
 }
 
 .impact-text h3 {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #000;
-  font-family: var(--text-font);
-  margin: 0;
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #000;
+	font-family: var(--text-font);
+	margin: 0;
 }
 
 .impact-text p {
-  font-size: 0.95rem;
-  margin: 0;
-  line-height: 1.3;
+	font-size: 0.95rem;
+	margin: 0;
+	line-height: 1.3;
 }
 
 /***********************************
@@ -653,173 +756,532 @@ button {
 	Contact Intro
 *****************/
 .contact-us {
-  padding: 1rem 1rem 0.75rem;
+	padding: 1rem 1rem 0.75rem;
 }
 
 .contact-us .section-header {
-  text-align: center;
-  margin-bottom: 0.5rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
 }
 
 .contact-us h1 {
-  font-size: 2.9rem;
-  line-height: 1.05;
+	font-size: 2.9rem;
+	line-height: 1.05;
 }
 
 .contact-us-description {
-  background-color: var(--content-background);
-  border-radius: 0.6rem;
-  padding: 0.8rem 1rem;
+	background-color: var(--content-background);
+	border-radius: 0.6rem;
+	padding: 0.8rem 1rem;
 }
 
 .contact-us-description p {
-  font-size: 1rem;
-  line-height: 1.35;
-  margin: 0;
-  text-align: left;
+	font-size: 1rem;
+	line-height: 1.35;
+	margin: 0;
+	text-align: left;
 }
 
 /****************
 	Contact Form
 *****************/
 .contact-content.container {
-  padding-left: 1rem;
-  padding-right: 1rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
 }
 
 .contact-content .row {
-  row-gap: 1rem;
+	row-gap: 1rem;
 }
 
 .contact-form-container,
 .contact-info {
-  padding-left: 0;
-  padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
 
 .header-c {
-  text-align: center;
-  margin-bottom: 0.5rem;
+	text-align: center;
+	margin-bottom: 0.5rem;
 }
 
 .header-c h2 {
-  font-size: 2.8rem;
-  line-height: 1.05;
-  color: var(--header-color);
-  font-family: var(--headers-buttons-font);
+	font-size: 2.8rem;
+	line-height: 1.05;
+	color: var(--header-color);
+	font-family: var(--headers-buttons-font);
 }
 
 .form-card {
-  background-color: var(--content-background);
-  border-radius: 0.6rem;
-  padding: 1.25rem 1rem;
+	background-color: var(--content-background);
+	border-radius: 0.6rem;
+	padding: 1.25rem 1rem;
 }
 
 form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 label {
-  font-size: 1rem;
+	font-size: 1rem;
 }
 
 input,
 textarea {
-  width: 100%;
-  padding: 0.55rem 0.75rem;
-  border: 1px solid #666;
-  border-radius: 0.7rem;
-  background-color: #f3f3f3;
-  box-sizing: border-box;
-  font-size: 1rem;
+	width: 100%;
+	padding: 0.55rem 0.75rem;
+	border: 1px solid #666;
+	border-radius: 0.7rem;
+	background-color: #f3f3f3;
+	box-sizing: border-box;
+	font-size: 1rem;
 }
 
 textarea {
-  min-height: 110px;
-  resize: none;
+	min-height: 110px;
+	resize: none;
 }
 
 .contact-form-actions {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-top: 0.5rem;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 0.5rem;
 }
 
 .contact-form-actions .button-link {
-  color: white !important;
-  padding: 0.7rem 1.8rem;
-  border-radius: 0.8rem;
-  font-size: 1rem;
+	color: white !important;
+	padding: 0.7rem 1.8rem;
+	border-radius: 0.8rem;
+	font-size: 1rem;
 }
 
 .form-paw {
-  width: 50px;
-  flex-shrink: 0;
+	width: 50px;
+	flex-shrink: 0;
 }
 
 /****************
 	Contact Info
 *****************/
 .contact-info-wrapper {
-  background-color: var(--content-background);
-  border-radius: 0.6rem;
-  padding: 1rem 1rem 1.2rem;
-  position: relative;
+	background-color: var(--content-background);
+	border-radius: 0.6rem;
+	padding: 1rem 1rem 1.2rem;
+	position: relative;
 }
 
 .contact-info-text {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
 }
 
 .sub-header {
-  font-family: var(--text-font);
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: #000;
-  margin-bottom: 0.2rem;
+	font-family: var(--text-font);
+	font-size: 1.2rem;
+	font-weight: 700;
+	color: #000;
+	margin-bottom: 0.2rem;
 }
 
 .contact-info-text p {
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.35;
+	margin: 0;
+	font-size: 1rem;
+	line-height: 1.35;
 }
 
 .contact-info-paw {
-  width: 58px;
-  margin: 1rem 0 0.75rem auto;
+	width: 58px;
+	margin: 1rem 0 0.75rem auto;
 }
 
 .social-icons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
+	display: flex;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .social-icons img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
+	width: 48px;
+	height: 48px;
+	object-fit: contain;
 }
+
+/***********************************
+	Tablet
+***********************************/
+@media (min-width: 768px) {
+
+	/****************
+  	Header
+  *****************/
+	.site-header {
+		background-color: var(--content-background);
+		padding: 1rem 1.5rem;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+
+	.header-top {
+		display: flex;
+		align-items: center;
+		margin-bottom: 0;
+		flex-shrink: 0;
+	}
+
+	.logo img {
+		width: 110px;
+	}
+
+	.menu-toggle {
+		display: none;
+	}
+
+	.site-nav {
+		display: block !important;
+		margin-top: 0;
+	}
+
+	.site-nav ul {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-end;
+		gap: 2rem;
+		align-items: center;
+	}
+
+	.site-nav a {
+		font-size: 1.2rem;
+		color: var(--button-color);
+	}
+
+	/****************
+  	Footer
+  *****************/
+	.footer-container {
+	padding: 1.5rem 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 2rem;
+}
+
+.footer-links {
+	flex-grow: 1;
+	justify-content: center;
+}
+
+.footer-links a {
+	font-size: 1.5rem;
+}
+.footer-links ul {
+	gap: 1rem;
+}
+
+/* icons bigger */
+.footer-left img,
+.footer-middle-right img {
+	width: 55px;
+}
+
+	.footer-logo {
+		width: 80px;
+	}
+
+	.footer-right {
+	align-items: flex-end;
+}
+
+.footer-right p {
+	font-size: 0.9rem;
+	text-align: right;
+}
+	/*************************
+  			Home Page
+  **************************/
+	.hero-text-block {
+		padding: 1.5rem 2rem;
+	}
+
+	.hero h1 {
+		max-width: none;
+		font-size: 3.3rem;
+	}
+
+	.hero-content p {
+		max-width: 38rem;
+	}
+
+	/****************
+	Featured Pets 
+*****************/
+	.featured-pets-content .row {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.25rem;
+		align-items: start;
+	}
+
+	.featured-pets-content .pet-card {
+		width: 100%;
+		max-width: none;
+		margin: 0;
+		height: auto;
+	}
+
+	.featured-pets-content .pet-card:nth-child(3) {
+		grid-column: 1 / -1;
+		max-width: 48%;
+		justify-self: center;
+	}
+
+	.featured-pets-content .pet-card img:first-child {
+		width: 100%;
+		height: 250px;
+		object-fit: cover;
+	}
+
+	.pet-card {
+		padding: 0.85rem;
+	}
+
+	.pet-name h3 {
+		font-size: 1.7rem;
+	}
+
+	.pet-card p {
+		font-size: 0.9rem;
+		line-height: 1.3;
+	}
+
+	.pet-card .button-link {
+		padding: 0.45rem 0.9rem;
+		font-size: 0.9rem;
+	}
+
+	.featured-pets-content .row {
+		row-gap: 1.5rem;
+	}
+
+	.pet-card {
+		height: 100%;
+	}
+
+/****************
+	Volunteer and About Sections
+*****************/
+.volunteer-content,
+.about-content {
+  background-color: var(--content-background);
+  border-radius: 0.35rem;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "title title"
+    "image text";
+  column-gap: 1.5rem;
+  row-gap: 1rem;
+  align-items: start;
+}
+
+.volunteer-content .section-header,
+.about-content .section-header {
+  grid-area: title;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+.volunteer-content img,
+.about-content img {
+  grid-area: image;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 0.35rem;
+}
+
+.volunteer-text,
+.about-text {
+  grid-area: text;
+  width: 100%;
+}
+
+.volunteer-text p,
+.about-text p {
+  font-size: 1rem;
+  line-height: 1.45;
+  text-align: left;
+  margin-bottom: 1.25rem;
+}
+
+	
+
+	/****************
+  	About Page
+  *****************/
+	.about-hero-overlay {
+		width: 55%;
+		top: 55%;
+	}
+
+	.about-hero-overlay h1 {
+		font-size: 3.5rem;
+	}
+
+	.story-content,
+	.mission-content {
+		padding: 1.25rem 1.5rem;
+	}
+
+	.impact-stats .row {
+		row-gap: 1.25rem;
+	}
+
+	/****************
+  	Contact Page
+  *****************/
+	.contact-content .row {
+		row-gap: 1.5rem;
+	}
+
+	.form-card,
+	.contact-info-wrapper {
+		padding: 1.25rem 1.25rem 1.4rem;
+	}
+
+	input,
+	textarea {
+		font-size: 1rem;
+	}
+}
+
+/***********************************
+	Desktop
+***********************************/
+@media (min-width: 992px) {
+
+	/****************
+  	Header
+  *****************/
+	.site-header {
+		padding: 1.2rem 2.5rem;
+	}
+
+	.logo img {
+		width: 120px;
+	}
+
+	.site-nav ul {
+		gap: 3rem;
+	}
+
+	.site-nav a {
+		font-size: 1.35rem;
+	}
+
+	/****************
+  	Home Page
+  *****************/
+	.hero-image img {
+		max-height: 520px;
+		object-fit: cover;
+	}
+
+	.hero-text-block {
+		padding: 2rem 3rem;
+	}
+
+	.hero h1 {
+		font-size: 4rem;
+	}
+
+	.hero-content p {
+		font-size: 1.1rem;
+		max-width: 42rem;
+	}
+
+	.featured-pets-content.container {
+		max-width: 1200px;
+	}
+
+	.pet-card {
+		padding: 1rem;
+	}
+
+	.volunteer-content,
+	.about-content {
+		max-width: 1100px;
+		margin: 0 auto;
+	}
+
+	/****************
+  	About Page
+  *****************/
+	.about-hero-overlay {
+		width: 42%;
+		top: 52%;
+	}
+
+	.about-hero-overlay h1 {
+		font-size: 4rem;
+	}
+
+	.impact-stats.container {
+		max-width: 1100px;
+	}
+
+	.impact-stats .row {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1rem;
+	}
+
+	.impact-card {
+		flex: 1;
+	}
+
+	.impact-inner {
+		min-height: 140px;
+	}
+
+	/****************
+  	Contact Page
+  *****************/
+	.contact-content.container {
+		max-width: 1100px;
+	}
+
+	.contact-content .row {
+		display: flex;
+		flex-wrap: nowrap;
+		gap: 1.5rem;
+	}
+
+	.contact-form-container,
+	.contact-info {
+		width: 50%;
+	}
+}
+
 /****************
 	Skip Link
 *****************/
 
 .skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: black;
-  color: white;
-  padding: 8px;
-  z-index: 100;
+	position: absolute;
+	top: -40px;
+	left: 0;
+	background: black;
+	color: white;
+	padding: 8px;
+	z-index: 100;
 }
 
 .skip-link:focus {
-  top: 0;
+	top: 0;
 }
