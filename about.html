@@ -7,52 +7,68 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <header>
-      <nav>
-        <a href="home.html">Home</a>
-        <a href="about.html">About</a>
-        <a href="contact.html">Contact</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-top">
+        <div class="logo">
+          <a href="home.html">
+            <img src="images/logo.png" alt="Happy Paws Animal Shelter logo" />
+          </a>
+        </div>
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="site-nav"
+        >
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
       </nav>
     </header>
     <main></main>
     <footer class="site-footer">
-    <div class="footer-container">
+      <div class="footer-container">
+        <!-- left paw icon -->
+        <div class="footer-left">
+          <img src="images/cat-paw.png" alt="icon of a cat paw" />
+        </div>
 
-      <!-- left paw icon -->
-      <div class="footer-left">
-        <img src="" alt="">
-      </div>
+        <!-- navigation links -->
+        <div class="footer-links">
+          <ul>
+            <li>
+              <a href="home.html">Home</a>
+              <a href="contact.html">Contact</a>
+              <a href="about.html">About</a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <a href="#">Sign-up</a>
+              <a href="#">Career</a>
+              <a href="#">News</a>
+            </li>
+          </ul>
+        </div>
 
-      <!-- navigation links -->
-      <div class="footer-links">
-        <ul>
-          <li>
-            <a href="home.html">Home</a>
-            <a href="contact.html">Contact</a>
-            <a href="about.html">About</a>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <a href="#">Sign-up</a>
-            <a href="#">Career</a>
-            <a href="#">News</a>
-          </li>
-        </ul>
-      </div>
+        <!-- right paw icon -->
+        <div class="footer-right">
+          <img src="images/dog-paw.png" alt="icon of a dog paw" />
+        </div>
 
-      <!-- right paw icon -->
-       <div class="footer-right">
-        <img src="" alt="">
-       </div>
-
-       <!-- bottom copyright -->
+        <!-- bottom copyright -->
         <div class="footer-bottom">
           <!-- logo -->
-          <img src="" alt="">
+          <img src="" alt="" />
           <p>&copy;Pawsitive Futures</p>
         </div>
-    </div>
-  </footer>
+      </div>
+    </footer>
   </body>
 </html>
