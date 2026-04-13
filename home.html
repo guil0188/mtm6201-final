@@ -19,6 +19,7 @@
           class="menu-toggle"
           aria-label="Open navigation menu"
           aria-controls="site-nav"
+          aria-expanded="false"
         >
           <span>&#9776;</span>
         </button>
@@ -43,7 +44,7 @@
             forever families. Start your adoption journey today and meet the
             companion who will change your life.
           </p>
-          <a href="#">Adopt a Pet</a>
+          <a href="#" class="button-link" id="adopt-pet">Adopt a Pet</a>
         </div>
       </section>
 
@@ -51,7 +52,39 @@
         <div class="section-header">
           <h2>Featured Pets</h2>
         </div>
-        <div class="featured-pets-content"></div>
+        <div class="featured-pets-content">
+          <article class="pet-card">
+            <img src="images/buddy.jpg" alt="Buddy the dog" />
+            <h3>Buddy</h3>
+            <p>
+              Buddy is a playful and loving golden retriever who enjoys long
+              walks and belly rubs. He gets along well with kids and other dogs
+              and would make a wonderful addition to an active family.
+            </p>
+            <a href="#" class="button-link">View</a>
+          </article>
+          <article class="pet-card">
+            <img src="images/luna.jpg" alt="luna the cat" />
+            <h3>Luna</h3>
+            <p>
+              Luna is a gentle and curious cat who loves cozy naps and sunny
+              windows. She enjoys quiet environments and would be the perfect
+              companion for someone looking for a calm and affectionate friend.
+            </p>
+            <a href="#" class="button-link">View</a>
+          </article>
+          <article class="pet-card">
+            <img src="images/max.jpg" alt="Max the dog" />
+            <h3>Max</h3>
+            <p>
+              Max is an energetic and loyal dog who loves playing fetch and
+              exploring the outdoors. He is friendly, intelligent, and would
+              thrive in a home that enjoys walks, adventures, and plenty of
+              playtime.
+            </p>
+            <a href="#" class="button-link">View</a>
+          </article>
+        </div>
       </section>
 
       <section class="volunteer-section">
@@ -64,7 +97,7 @@
             helping at adoption events, there are many ways you can make a
             difference in the lives of animals waiting for a home.
           </p>
-          <a href="#">Become a Volunteer</a>
+          <a href="#" class="button-link" id="volunteer">Become a Volunteer</a>
         </div>
       </section>
 
@@ -79,7 +112,9 @@
             to rescue animals in need, provide medical care, and match them with
             families who will give them the love they deserve.
           </p>
-          <a href="about.html">Learn More</a>
+          <a href="about.html" class="button-link" id="learn-more"
+            >Learn More</a
+          >
         </div>
       </section>
     </main>
