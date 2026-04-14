@@ -1,185 +1,206 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About-us | Happy Paws Animal Shelter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About-us | Happy Paws Animal Shelter</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css" />
-</head>
+  <body>
+    <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-top">
+        <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
 
-<body>
-  <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
-
-      <div class="logo">
-        <a href="home.html">
-          <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
-        </a>
-      </div>
-      <!-- This button controls the mobile menu.
+        <div class="logo">
+          <a href="home.html">
+            <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
+          </a>
+        </div>
+        <!-- This button controls the mobile menu.
              The aria attributes help screen readers understand that this button opens and closes the navigation. -->
-      <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false"
-        type="button">
-        <span>&#9776;</span>
-      </button>
-    </div>
-    <!-- I gave the nav an id so the menu button can target it in JavaScript.
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          type="button"
+        >
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <!-- I gave the nav an id so the menu button can target it in JavaScript.
            The aria-label gives a clearer description of what this navigation is for. -->
-    <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="main-content">
-    <section class="about-hero">
-      <!-- This hero image gives the About page a strong visual start before the text sections below. -->
-
-      <img src="images/about-us-hero.png" alt="Volunteer interacting with a dog at the shelter" />
-      <!-- I placed the heading in an overlay so it sits directly on top of the hero image instead of taking up separate space. -->
-
-      <div class="about-hero-overlay">
-        <h1>About Us!</h1>
-      </div>
-    </section>
-
-    <section class="our-story">
-      <!-- This content card explains the shelter background in a more personal way.
-             I kept the heading, paragraph, and optional image together so I can rearrange them with CSS at different screen sizes. -->
-      <div class="story-content">
-        <div class="section-header">
-          <h2>Our Story</h2>
-        </div>
-        <p>
-          Happy Paws Animal Shelter was founded with one simple goal: to give
-          abandoned and rescued animals a second chance at life. What began as
-          a small local initiative has grown into a trusted community
-          organization dedicated to animal welfare.
-        </p>
-        <!-- This image is hidden on smaller screens and shown on larger ones so the layout stays cleaner on mobile. -->
-
-        <img class="mission-story-img" src="images/our-story.jpg" alt="Our Story" />
-      </div>
-    </section>
-    <section class="our-mission">
-      <!-- I used almost the same structure here as the story section so both cards feel related as part of the same page. -->
-
-      <div class="mission-content">
-        <div class="section-header">
-          <h2>Our Mission</h2>
-        </div>
-        <p>
-          Our mission is to rescue, rehabilitate, and rehome animals in need
-          while promoting responsible pet ownership. We believe every animal
-          deserves compassion, care, and a loving forever home.
-        </p>
-        <img class="mission-story-img" src="images/our-mission.jpg" alt="Our Mission" />
-      </div>
-    </section>
-
-    <section class="our-impact">
-      <div class="section-header">
-        <h2>Our Impact</h2>
-      </div>
-      <!-- I used separate impact cards so the numbers feel quick to scan instead of being buried in one paragraph. -->
-
-      <div class="impact-stats container">
-        <div class="row">
-          <article class="impact-card col-12">
-            <div class="impact-inner">
-              <!-- The icon is decorative here, so the alt is left empty to avoid screen readers repeating unnecessary info. -->
-              <img src="images/cat-paw.png" alt="" class="impact-icon" />
-              <div class="impact-text">
-                <h3>Animals Adopted</h3>
-                <p>1,250 Animals Adopted</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="impact-card col-12">
-            <div class="impact-inner">
-              <img src="images/cat-paw.png" alt="" class="impact-icon" />
-              <div class="impact-text">
-                <h3>Volunteers</h3>
-                <p>150 Active Volunteers</p>
-              </div>
-            </div>
-          </article>
-
-          <article class="impact-card col-12">
-            <div class="impact-inner">
-              <img src="images/cat-paw.png" alt="" class="impact-icon" />
-              <div class="impact-text">
-                <h3>Years Running</h3>
-                <p>10 Years Serving the Community</p>
-              </div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-container">
-      <!-- These paw images help carry the branding all the way to the bottom of the page. -->
-
-      <div class="footer-left">
-        <img src="images/cat-paw.png" alt="icon of a cat paw" />
-      </div>
-      <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
-
-      <div class="footer-links">
+      <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="about-hero">
+        <!-- This hero image gives the About page a strong visual start before the text sections below. -->
 
-        <ul>
-          <li><a href="#">Sign-up</a></li>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
+        <img
+          src="images/about-us-hero.png"
+          alt="Volunteer interacting with a dog at the shelter"
+        />
+        <!-- I placed the heading in an overlay so it sits directly on top of the hero image instead of taking up separate space. -->
+
+        <div class="about-hero-overlay">
+          <h1>About Us!</h1>
+        </div>
+      </section>
+
+      <section class="our-story">
+        <!-- This content card explains the shelter background in a more personal way.
+             I kept the heading, paragraph, and optional image together so I can rearrange them with CSS at different screen sizes. -->
+        <div class="story-content">
+          <div class="section-header">
+            <h2>Our Story</h2>
+          </div>
+          <p>
+            Happy Paws Animal Shelter was founded with one simple goal: to give
+            abandoned and rescued animals a second chance at life. What began as
+            a small local initiative has grown into a trusted community
+            organization dedicated to animal welfare.
+          </p>
+          <!-- This image is hidden on smaller screens and shown on larger ones so the layout stays cleaner on mobile. -->
+
+          <img
+            class="mission-story-img"
+            src="images/our-story.jpg"
+            alt="Our Story"
+          />
+        </div>
+      </section>
+      <section class="our-mission">
+        <!-- I used almost the same structure here as the story section so both cards feel related as part of the same page. -->
+
+        <div class="mission-content">
+          <div class="section-header">
+            <h2>Our Mission</h2>
+          </div>
+          <p>
+            Our mission is to rescue, rehabilitate, and rehome animals in need
+            while promoting responsible pet ownership. We believe every animal
+            deserves compassion, care, and a loving forever home.
+          </p>
+          <img
+            class="mission-story-img"
+            src="images/our-mission.png"
+            alt="Our Mission"
+          />
+        </div>
+      </section>
+
+      <section class="our-impact">
+        <div class="section-header">
+          <h2>Our Impact</h2>
+        </div>
+        <!-- I used separate impact cards so the numbers feel quick to scan instead of being buried in one paragraph. -->
+
+        <div class="impact-stats container">
+          <div class="row">
+            <article class="impact-card col-12">
+              <div class="impact-inner">
+                <!-- The icon is decorative here, so the alt is left empty to avoid screen readers repeating unnecessary info. -->
+                <img src="images/cat-paw.png" alt="" class="impact-icon" />
+                <div class="impact-text">
+                  <h3>Animals Adopted</h3>
+                  <p>1,250 Animals Adopted</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="impact-card col-12">
+              <div class="impact-inner">
+                <img src="images/cat-paw.png" alt="" class="impact-icon" />
+                <div class="impact-text">
+                  <h3>Volunteers</h3>
+                  <p>150 Active Volunteers</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="impact-card col-12">
+              <div class="impact-inner">
+                <img src="images/cat-paw.png" alt="" class="impact-icon" />
+                <div class="impact-text">
+                  <h3>Years Running</h3>
+                  <p>10 Years Serving the Community</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- These paw images help carry the branding all the way to the bottom of the page. -->
+
+        <div class="footer-left">
+          <img src="images/cat-paw.png" alt="icon of a cat paw" />
+        </div>
+        <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#">Sign-up</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-middle-right">
+          <img src="images/dog-paw.png" alt="icon of a dog paw" />
+        </div>
+        <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+
+        <div class="footer-right">
+          <img
+            src="images/logo.svg"
+            alt="Happy Paws Animal Shelter logo"
+            class="footer-logo"
+          />
+          <p>&copy; Pawsitive Futures</p>
+        </div>
       </div>
+    </footer>
+    <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
 
-      <div class="footer-middle-right">
-        <img src="images/dog-paw.png" alt="icon of a dog paw" />
-      </div>
-      <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
 
-      <div class="footer-right">
-        <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" class="footer-logo" />
-        <p>&copy; Pawsitive Futures</p>
-      </div>
-    </div>
-  </footer>
-  <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector(".site-nav");
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
+      menuToggle.addEventListener("click", function () {
+        // This class controls whether the mobile navigation is visible or hidden.
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNav = document.querySelector(".site-nav");
+        siteNav.classList.toggle("nav-open");
 
-    menuToggle.addEventListener("click", function () {
-      // This class controls whether the mobile navigation is visible or hidden.
+        // I also update aria-expanded so assistive technology knows the button state changed.
 
-      siteNav.classList.toggle("nav-open");
-
-      // I also update aria-expanded so assistive technology knows the button state changed.
-
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-    });
-  </script>
-</body>
-
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+      });
+    </script>
+  </body>
 </html>
