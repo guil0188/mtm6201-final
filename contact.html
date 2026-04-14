@@ -1,182 +1,202 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact | Happy Paws Animal Shelter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact | Happy Paws Animal Shelter</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css" />
-</head>
+  <body>
+    <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-top">
+        <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
 
-<body>
-  <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
-
-      <div class="logo">
-        <a href="home.html">
-          <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
-        </a>
-      </div>
-      <!-- This button controls the mobile menu.
+        <div class="logo">
+          <a href="home.html">
+            <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
+          </a>
+        </div>
+        <!-- This button controls the mobile menu.
              The aria attributes help screen readers understand that this button opens and closes the navigation. -->
-      <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false"
-        type="button">
-        <span>&#9776;</span>
-      </button>
-    </div>
-    <!-- I gave the nav an id so the menu button can target it in JavaScript.
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          type="button"
+        >
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <!-- I gave the nav an id so the menu button can target it in JavaScript.
            The aria-label gives a clearer description of what this navigation is for. -->
-    <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main id="main-content">
-    <section class="contact-us">
-      <div class="section-header">
-        <h1>Contact Us!</h1>
-      </div>
-      <!-- This short intro explains the purpose of the page before the form starts. -->
-
-      <div class="contact-us-description">
-        <p>
-          Have questions about adoption or volunteering? We'd love to hear
-          from you. Fill out the form below or reach out using the contact
-          information provided.
-        </p>
-      </div>
-    </section>
-
-    <!-- I used a two-part layout here so the form and contact details can stack on mobile and sit side by side on larger screens. -->
-    <section class="contact-content container">
-      <div class="row">
-        <section class="contact-form-container col-12">
-          <div class="header-c">
-            <h2>Contact Form</h2>
-          </div>
-          <!-- The form is wrapped in its own card so it visually feels separate from the page background. -->
-          <div class="form-card">
-            <form action="#" method="post">
-              <!-- Labels are included for each field so the form is clearer and more accessible. -->
-
-              <label for="fullname">Full Name</label>
-              <input type="text" id="fullname" name="fullname" required />
-
-              <label for="email">Email</label>
-              <input type="text" id="email" name="email" required />
-
-              <label for="phonenumber">Phone Number</label>
-              <input type="text" id="phonenumber" name="phonenumber" />
-
-              <label for="message">Message</label>
-              <textarea name="message" id="message"></textarea>
-
-              <!-- I grouped the submit button and paw icon together so they can sit on one line at the bottom of the form. -->
-              <div class="contact-form-actions">
-                <button type="submit" class="button-link cta-btn">Submit</button>
-                <img src="images/dog-paw.png" alt="" class="form-paw" />
-              </div>
-            </form>
-          </div>
-        </section>
-
-        <section class="contact-info col-12">
-          <div class="header-c">
-            <h2>Contact Info</h2>
-          </div>
-          <!-- This card keeps the contact details grouped together and easier to scan. -->
-
-          <div class="contact-info-wrapper">
-            <div class="contact-info-text">
-              <div class="address">
-                <h4 class="sub-header">Address</h4>
-                <p>123 Paw Street, Ottawa, ON</p>
-              </div>
-
-              <div class="phone">
-                <h4 class="sub-header">Phone</h4>
-                <p>(613) 555-0147</p>
-              </div>
-
-              <div class="email">
-                <h4 class="sub-header">Email</h4>
-                <p>info@happypawshelter.ca</p>
-              </div>
-            </div>
-            <!-- Decorative paw image used to carry the visual style from the rest of the site into this section too. -->
-            <img src="images/cat-paw.png" alt="" class="contact-info-paw" />
-            <!-- These icons make it look like the shelter also has a social presence instead of only a form and phone number. -->
-            <div class="social-icons">
-              <img src="images/instagram.png" alt="Instagram icon" />
-              <img src="images/facebook.png" alt="Facebook icon" />
-              <img src="images/twitter.png" alt="X icon" />
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-  </main>
-  <footer class="site-footer">
-    <div class="footer-container">
-      <!-- These paw images help carry the branding all the way to the bottom of the page. -->
-
-      <div class="footer-left">
-        <img src="images/cat-paw.png" alt="icon of a cat paw" />
-      </div>
-      <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
-
-      <div class="footer-links">
+      <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+    </header>
+    <main id="main-content">
+      <section class="contact-us">
+        <div class="section-header">
+          <h1>Contact Us!</h1>
+        </div>
+        <!-- This short intro explains the purpose of the page before the form starts. -->
 
-        <ul>
-          <li><a href="#">Sign-up</a></li>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
+        <div class="contact-us-description">
+          <p>
+            Have questions about adoption or volunteering? We'd love to hear
+            from you. Fill out the form below or reach out using the contact
+            information provided.
+          </p>
+        </div>
+      </section>
+
+      <!-- I used a two-part layout here so the form and contact details can stack on mobile and sit side by side on larger screens. -->
+      <section class="contact-content container">
+        <div class="row">
+          <section class="contact-form-container col-12">
+            <div class="header-c">
+              <h2>Contact Form</h2>
+            </div>
+            <!-- The form is wrapped in its own card so it visually feels separate from the page background. -->
+            <div class="form-card">
+              <form action="#" method="post">
+                <!-- Labels are included for each field so the form is clearer and more accessible. -->
+
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required />
+
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email" required />
+
+                <label for="phonenumber">Phone Number</label>
+                <input type="text" id="phonenumber" name="phonenumber" />
+
+                <label for="message">Message</label>
+                <textarea name="message" id="message"></textarea>
+
+                <!-- I grouped the submit button and paw icon together so they can sit on one line at the bottom of the form. -->
+                <div class="contact-form-actions">
+                  <button type="submit" class="button-link cta-btn">
+                    Submit
+                  </button>
+                  <img
+                    src="images/dog-paw.png"
+                    alt="icon of dog paw"
+                    class="form-paw"
+                  />
+                </div>
+              </form>
+            </div>
+          </section>
+
+          <section class="contact-info col-12">
+            <div class="header-c">
+              <h2>Contact Info</h2>
+            </div>
+            <!-- This card keeps the contact details grouped together and easier to scan. -->
+
+            <div class="contact-info-wrapper">
+              <div class="contact-info-text">
+                <div class="address">
+                  <h4 class="sub-header">Address</h4>
+                  <p>123 Paw Street, Ottawa, ON</p>
+                </div>
+
+                <div class="phone">
+                  <h4 class="sub-header">Phone</h4>
+                  <p>(613) 555-0147</p>
+                </div>
+
+                <div class="email">
+                  <h4 class="sub-header">Email</h4>
+                  <p>info@happypawshelter.ca</p>
+                </div>
+              </div>
+              <!-- Decorative paw image used to carry the visual style from the rest of the site into this section too. -->
+              <img
+                src="images/cat-paw.png"
+                alt="icon of cat paw"
+                class="contact-info-paw"
+              />
+              <!-- These icons make it look like the shelter also has a social presence instead of only a form and phone number. -->
+              <div class="social-icons">
+                <img src="images/instagram.png" alt="Instagram icon" />
+                <img src="images/facebook.png" alt="Facebook icon" />
+                <img src="images/twitter.png" alt="X icon" />
+              </div>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- These paw images help carry the branding all the way to the bottom of the page. -->
+
+        <div class="footer-left">
+          <img src="images/cat-paw.png" alt="icon of a cat paw" />
+        </div>
+        <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#">Sign-up</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-middle-right">
+          <img src="images/dog-paw.png" alt="icon of a dog paw" />
+        </div>
+        <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+
+        <div class="footer-right">
+          <img
+            src="images/logo.svg"
+            alt="Happy Paws Animal Shelter logo"
+            class="footer-logo"
+          />
+          <p>&copy; Pawsitive Futures</p>
+        </div>
       </div>
+    </footer>
+    <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
 
-      <div class="footer-middle-right">
-        <img src="images/dog-paw.png" alt="icon of a dog paw" />
-      </div>
-      <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
 
-      <div class="footer-right">
-        <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" class="footer-logo" />
-        <p>&copy; Pawsitive Futures</p>
-      </div>
-    </div>
-  </footer>
-  <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector(".site-nav");
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
+      menuToggle.addEventListener("click", function () {
+        // This class controls whether the mobile navigation is visible or hidden.
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNav = document.querySelector(".site-nav");
+        siteNav.classList.toggle("nav-open");
 
-    menuToggle.addEventListener("click", function () {
-      // This class controls whether the mobile navigation is visible or hidden.
+        // I also update aria-expanded so assistive technology knows the button state changed.
 
-      siteNav.classList.toggle("nav-open");
-
-      // I also update aria-expanded so assistive technology knows the button state changed.
-
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-    });
-  </script>
-</body>
-
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+      });
+    </script>
+  </body>
 </html>

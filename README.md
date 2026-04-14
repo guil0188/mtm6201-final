@@ -53,3 +53,20 @@ By creating this project, I learned a lot more about responsive design and how i
     - <a href="https://www.flaticon.com/free-icons/facebook" title="facebook icons">Facebook icons created by Freepik - Flaticon</a>
     - <a href="https://www.flaticon.com/free-icons/instagram" title="instagram icons">Instagram icons created by cobynecz - Flaticon</a>
     - <a href="https://www.flaticon.com/free-icons/tweet" title="tweet icons">Tweet icons created by Freepik - Flaticon</a>
+
+## Wireframes
+
+- **Home page**
+  - ![home page mobile wireframe](wireframes/home-mobile-wireframe.png)
+  - ![home page tablet wireframe](wireframes/home-tablet-wireframe.png)
+  - ![home page desktop wireframe](wireframes/home-desktop-wireframe.png)
+
+- **About page**
+  - ![about page mobile wireframe](wireframes/about-mobile-wireframe.png)
+  - ![about page tablet wireframe](wireframes/about-tablet-wireframe.png)
+  - ![about page desktop wireframe](wireframes/about-desktop-wireframe.png)
+
+- **Contact page**
+  - ![contact page mobile wireframe](wireframes/contact-mobile-wireframe.png)
+  - ![contact page tablet wireframe](wireframes/contact-tablet-wireframe.png)
+  - ![contact page desktop wireframe](wireframes/contact-desktop-wireframe.png)
