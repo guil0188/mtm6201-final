@@ -767,6 +767,7 @@ textarea {
 	height: 50px;
 	object-fit: contain;
 }
+
 /********************************* 
 	INTERACTIONS (HOVER + FOCUS)
 **********************************/
@@ -774,7 +775,7 @@ textarea {
 /* I added transitions here so links and buttons react smoothly instead of snapping instantly between states. */
 a,
 button {
-  transition: all 0.2s ease;
+	transition: all 0.2s ease;
 }
 
 /**************** 
@@ -783,14 +784,14 @@ button {
 
 /* Lowering the opacity on hover is a simple way to show that the link is interactive without changing the layout. */
 a:hover {
-  opacity: 0.8;
+	opacity: 0.8;
 }
 
 /* Focus-visible is important for keyboard accessibility because it shows clearly where the user is on the page. */
 a:focus-visible {
-  outline: 3px solid var(--heading-color);
-  outline-offset: 3px;
-  border-radius: 6px;
+	outline: 3px solid var(--heading-color);
+	outline-offset: 3px;
+	border-radius: 6px;
 }
 
 /**************** 
@@ -799,11 +800,11 @@ a:focus-visible {
 
 /* Header links get the button color on hover so they feel more tied into the main color palette. */
 .site-nav a:hover {
-  color: var(--button-color);
+	color: var(--button-color);
 }
 
 .site-nav a:focus-visible {
-  outline: 3px solid var(--button-color);
+	outline: 3px solid var(--button-color);
 }
 
 /**************** 
@@ -814,32 +815,32 @@ a:focus-visible {
 button,
 .button,
 .cta-btn {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 /* The lift effect and soft shadow on hover make the buttons feel more clickable. */
 button:hover,
 .button:hover,
 .cta-btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
-  filter: brightness(0.95);
+	transform: translateY(-2px);
+	box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+	filter: brightness(0.95);
 }
 
 /* On click, the button settles back down so it feels like it was pressed. */
 button:active,
 .button:active,
 .cta-btn:active {
-  transform: translateY(0);
-  box-shadow: none;
+	transform: translateY(0);
+	box-shadow: none;
 }
 
 /* This makes keyboard focus very obvious, which is especially useful for forms and navigation. */
 button:focus-visible,
 .button:focus-visible,
 .cta-btn:focus-visible {
-  outline: 3px solid var(--heading-color);
-  outline-offset: 3px;
+	outline: 3px solid var(--heading-color);
+	outline-offset: 3px;
 }
 
 /************************* 
@@ -849,14 +850,14 @@ button:focus-visible,
 /* I added transitions to the cards too so they can animate smoothly when hovered. */
 .pet-card,
 .card {
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+	transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* The hover lift gives the pet cards a little more life without being too dramatic. */
 .pet-card:hover,
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
+	transform: translateY(-6px);
+	box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
 }
 
 /**************** 
@@ -866,51 +867,52 @@ button:focus-visible,
 /* This lets the card images zoom slightly on hover for a more polished interactive feel. */
 .pet-card img,
 .card img {
-  transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
 }
 
 .pet-card:hover img,
 .card:hover img {
-  transform: scale(1.03);
+	transform: scale(1.03);
 }
+
 /**************** 
 	SOCIAL ICONS
 *****************/
 
 /* I reset the social icon layout here to keep their spacing neat and consistent. */
 .social-icons {
-  display: flex;
-  gap: 0.8rem;
-  align-items: center;
+	display: flex;
+	gap: 0.8rem;
+	align-items: center;
 }
 
 /* The white background, rounded corners, and shadow make the icons feel like clickable UI elements instead of just flat images. */
 .social-icons img {
-  width: 42px;
-  height: 42px;
-  padding: 6px;
-  border-radius: 12px;
-  background: white;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  transition: all 0.25s ease;
+	width: 42px;
+	height: 42px;
+	padding: 6px;
+	border-radius: 12px;
+	background: white;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+	transition: all 0.25s ease;
 }
 
 /* On hover I lift and scale them slightly so they feel more playful and interactive. */
 .social-icons img:hover {
-  transform: translateY(-4px) scale(1.08);
-  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+	transform: translateY(-4px) scale(1.08);
+	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
 /* This makes the click feel a little more tactile. */
 .social-icons img:active {
-  transform: scale(0.95);
-  box-shadow: none;
+	transform: scale(0.95);
+	box-shadow: none;
 }
 
 /* If the icons are ever wrapped in links, this makes keyboard focus visible there too. */
 .social-icons a:focus-visible img {
-  outline: 3px solid var(--heading-color);
-  outline-offset: 3px;
+	outline: 3px solid var(--heading-color);
+	outline-offset: 3px;
 }
 
 /******************** 
@@ -1335,7 +1337,7 @@ button:focus-visible,
 	.impact-inner {
 		min-height: 145px;
 	}
-	
+
 	/* The contact section gets more width and padding here so the layout does not look cramped. */
 	.contact-content.container {
 		max-width: 1180px;
