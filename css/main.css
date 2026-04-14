@@ -1,6 +1,6 @@
-/* =========================
-   RESET
-========================= */
+/**************** 
+		RESET
+*****************/
 *,
 *::before,
 *::after {
@@ -49,9 +49,11 @@ a {
 	text-decoration: none;
 }
 
-/* =========================
-   VARIABLES
-========================= */
+/**************** 
+	VARIABLES
+*****************/
+/* I used CSS variables here so the whole site stays consistent.
+   This makes it way easier to update colors, border radius, spacing feel, and fonts without hunting through the whole file. */
 :root {
 	--background-color: #f9ceaa;
 	--surface-color: #f1dfd0;
@@ -75,9 +77,13 @@ a {
 	--text-font: "Sunflower", sans-serif;
 }
 
-/* =========================
-   GLOBAL
-========================= */
+/**************** 
+	GLOBAL
+*****************/
+
+/* These are the default styles for the whole page.
+   I set the main background color, body font, text color, and line-height here so everything starts from the same base style. */
+
 body {
 	background: var(--background-color);
 	color: var(--text-color);
@@ -85,18 +91,23 @@ body {
 	line-height: 1.55;
 }
 
+/* This clips anything that would accidentally spill outside of main due to transforms or overlap effects. */
 main {
 	overflow: clip;
 }
 
+/* I added top and bottom spacing to sections here so I would not have to repeat the same padding on every single section. */
 main section {
 	padding: 3rem 1rem;
 }
 
+/* Section headings get a bottom margin so there is breathing room before the content that follows. */
 .section-header {
 	margin-bottom: 1rem;
 }
 
+/* These heading styles create the main visual personality of the site.
+   I used the decorative font and dark blue color here because those are major parts of the shelter branding. */
 h1,
 h2,
 h3,
@@ -106,6 +117,7 @@ h4 {
 	line-height: 1.05;
 }
 
+/* Clamp lets the heading scale between screen sizes without me needing to set a bunch of separate font sizes for every breakpoint. */
 h1 {
 	font-size: clamp(2.75rem, 7vw, 4.8rem);
 }
@@ -118,6 +130,7 @@ h3 {
 	font-size: 1.6rem;
 }
 
+/* I kept form text and paragraph text on the more readable font so the decorative one only gets used where it has the strongest impact. */
 p,
 label,
 input,
@@ -125,14 +138,18 @@ textarea {
 	font-family: var(--text-font);
 }
 
+/* This utility class is here in case I want to limit content width without repeating the same width code each time. */
 .container-limit {
 	width: min(100%, var(--content-width));
 	margin-inline: auto;
 }
 
-/* =========================
-   SKIP LINK
-========================= */
+/**************** 
+	SKIP LINK
+*****************/
+
+/* The skip link starts off-screen so it does not show during normal browsing.
+   It only appears when a keyboard user tabs to it. */
 .skip-link {
 	position: absolute;
 	top: -48px;
@@ -144,13 +161,16 @@ textarea {
 	border-radius: 0 0 8px 0;
 }
 
+/* Moving it to the top on focus makes it usable without permanently taking up layout space. */
 .skip-link:focus {
 	top: 0;
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/**************** 
+	BUTTONS
+*****************/
+
+/* These shared button styles make all call-to-action elements feel consistent across the site. */
 .button-link,
 button {
 	display: inline-flex;
@@ -169,15 +189,19 @@ button {
 	transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
+/* On hover I slightly darken the button and lift it a bit so it feels more interactive without going overboard. */
 .button-link:hover,
 button:hover {
 	background: var(--button-hover);
 	transform: translateY(-1px);
 }
 
-/* =========================
-   HEADER
-========================= */
+/**************** 
+	HEADER
+*****************/
+
+/* The header stays full width and uses the lighter surface color so it feels separate from the body background.
+   I changed it to relative instead of sticky because sticky was causing weird overlap issues at some breakpoints. */
 .site-header {
 	position: relative;
 	z-index: 20;
@@ -191,6 +215,7 @@ button:hover {
 	width: 100%;
 }
 
+/* These main layout wrappers stay centered and never grow wider than the page width variable. */
 .header-top,
 .site-nav,
 .footer-container {
@@ -198,6 +223,8 @@ button:hover {
 	margin-inline: auto;
 }
 
+/* The top part of the header holds the logo and the hamburger button.
+   Flexbox makes it easy to keep them separated on opposite sides. */
 .header-top {
 	display: flex;
 	align-items: center;
@@ -206,12 +233,14 @@ button:hover {
 	padding: 1rem;
 }
 
+/* The logo size is controlled here so it can scale with breakpoints later instead of relying on the image's default size. */
 .logo img {
 	width: 86px;
 	height: auto;
 	display: block;
 }
 
+/* I stripped the menu button down so it looks more like an icon and less like a default browser button. */
 .menu-toggle {
 	background: transparent;
 	border: 0;
@@ -220,21 +249,25 @@ button:hover {
 	cursor: pointer;
 }
 
+/* The menu icon is enlarged here to make it easier to tap on mobile. */
 .menu-toggle span {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 2.7rem;
 	line-height: 1;
 }
 
+/* The navigation starts hidden on mobile and is shown by JavaScript when the menu is opened. */
 .site-nav {
 	display: none;
 	padding: 0 1rem 1rem;
 }
 
+/* This class gets added by JavaScript when the menu is opened. */
 .site-nav.nav-open {
 	display: block;
 }
 
+/* On mobile the navigation is displayed as a vertical stack inside a white rounded panel. */
 .site-nav ul {
 	display: flex;
 	flex-direction: column;
@@ -245,6 +278,7 @@ button:hover {
 	box-shadow: var(--shadow);
 }
 
+/* These link styles make the menu feel more branded and easier to read. */
 .site-nav a {
 	display: inline-block;
 	color: var(--heading-color);
@@ -253,14 +287,17 @@ button:hover {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/**************** 
+	FOOTER
+*****************/
+
+/* I gave the footer more top margin so it clearly feels like the ending of the page instead of being glued to the last section. */
 .site-footer {
 	margin-top: 4rem;
 	background: var(--footer-color);
 }
 
+/* The footer uses a grid layout so the paws, links, and logo area stay balanced without manually pushing things around. */
 .footer-container {
 	width: min(100%, var(--page-width));
 	margin-inline: auto;
@@ -279,6 +316,7 @@ button:hover {
 	justify-content: center;
 }
 
+/* I kept these decorative paw images slightly smaller so they support the footer instead of overpowering the links. */
 .footer-left img,
 .footer-middle-right img {
 	width: 34px;
@@ -287,6 +325,7 @@ button:hover {
 	opacity: 0.95;
 }
 
+/* The footer links are split into two columns to help with scanning and spacing. */
 .footer-links {
 	display: flex;
 	justify-content: center;
@@ -305,10 +344,12 @@ button:hover {
 	line-height: 1.2;
 }
 
+/* The underline on hover is simple, but it clearly shows the footer links are interactive. */
 .footer-links a:hover {
 	text-decoration: underline;
 }
 
+/* The right side of the footer stacks the logo and copyright to keep the branding contained in one area. */
 .footer-right {
 	flex-direction: column;
 	gap: 0.45rem;
@@ -327,19 +368,23 @@ button:hover {
 	text-align: center;
 }
 
-/* =========================
-   HOME PAGE
-========================= */
+/**************** 
+	HOME PAGE
+*****************/
+
+/* I removed the default section padding from the hero because the image needs to go edge to edge. */
 .hero {
 	padding: 0;
 }
 
+/* The hero image uses object-fit so it fills the space nicely without stretching. */
 .hero-image img {
 	width: 100%;
 	height: min(58vw, 380px);
 	object-fit: cover;
 }
 
+/* This card overlaps the bottom of the hero image slightly to create a more layered layout. */
 .hero-text-block {
 	width: min(100% - 1.5rem, 900px);
 	margin: -2rem auto 0;
@@ -350,19 +395,23 @@ button:hover {
 	position: relative;
 }
 
+/* A little space under the main hero heading keeps the text block easier to read. */
 .hero .section-header {
 	margin-bottom: 0.75rem;
 }
 
+/* Text wrapping here helps stop the big heading from creating ugly line breaks. */
 .hero h1 {
 	text-wrap: balance;
 }
 
+/* The paragraph gets its own bottom margin so it does not sit too close to the button row. */
 .hero-content p {
 	font-size: 1rem;
 	margin-bottom: 1.25rem;
 }
 
+/* Flexbox lets the button and decorative paw sit on opposite sides of the row. */
 .hero-action {
 	display: flex;
 	justify-content: space-between;
@@ -375,6 +424,7 @@ button:hover {
 	opacity: 0.85;
 }
 
+/* This extra top padding separates the pets section from the hero block above it. */
 .featured-pets {
 	padding-top: 3.25rem;
 }
@@ -383,15 +433,18 @@ button:hover {
 	text-align: center;
 }
 
+/* I kept a bit of inner horizontal spacing here so the cards do not hit the screen edges on smaller devices. */
 .featured-pets-content.container {
 	padding-inline: 1rem;
 }
 
+/* The row is a grid so I can switch between one, two, or three columns at different breakpoints without changing the HTML. */
 .featured-pets-content .row {
 	display: grid;
 	gap: 1.1rem;
 }
 
+/* Each pet card gets its own background, rounded corners, and shadow to look like a distinct card. */
 .pet-card {
 	background: var(--card-blue);
 	border-radius: 24px;
@@ -399,6 +452,8 @@ button:hover {
 	box-shadow: var(--shadow);
 }
 
+/* The first image inside each pet card becomes the main pet photo.
+   Aspect ratio keeps them visually consistent even when the source images are different sizes. */
 .pet-card>img:first-child {
 	width: 100%;
 	aspect-ratio: 1 / 1;
@@ -407,6 +462,7 @@ button:hover {
 	margin-bottom: 0.9rem;
 }
 
+/* This tiny row keeps the pet name and paw icon lined up neatly. */
 .pet-name {
 	display: flex;
 	align-items: center;
@@ -414,6 +470,7 @@ button:hover {
 	margin-bottom: 0.3rem;
 }
 
+/* I used the regular readable font for pet names instead of the decorative one because it works better in smaller card headings. */
 .pet-name h3 {
 	color: #111;
 	font-family: var(--text-font);
@@ -431,11 +488,13 @@ button:hover {
 	margin-bottom: 0.9rem;
 }
 
+/* These two sections share the same design idea, so I grouped their CSS to avoid repeating the same code. */
 .volunteer-section,
 .about-shelter {
 	padding-top: 2rem;
 }
 
+/* Both sections are set up as card-like panels with rounded corners and shadows so they feel related to the rest of the page. */
 .volunteer-content,
 .about-content {
 	width: min(100%, 1020px);
@@ -455,6 +514,7 @@ button:hover {
 	margin-bottom: 0;
 }
 
+/* These images fill the content card width on mobile, then get rearranged beside the text on larger screens. */
 .volunteer-content>img,
 .about-content>img {
 	width: 100%;
@@ -468,9 +528,11 @@ button:hover {
 	margin-bottom: 1rem;
 }
 
-/* =========================
-   ABOUT PAGE
-========================= */
+/**************** 
+	ABOUT PAGE
+*****************/
+
+/* The About hero uses relative positioning so the text overlay can be placed on top of the image. */
 .about-hero {
 	position: relative;
 	padding: 0;
@@ -482,6 +544,7 @@ button:hover {
 	object-fit: cover;
 }
 
+/* The overlay card is centered near the bottom of the hero image to make the heading stand out more clearly. */
 .about-hero-overlay {
 	position: absolute;
 	inset: auto 50% 1.2rem auto;
@@ -500,6 +563,7 @@ button:hover {
 	padding-top: 2rem;
 }
 
+/* These story and mission cards use the same style so the page keeps a consistent visual structure. */
 .story-content,
 .mission-content {
 	width: min(100%, 980px);
@@ -516,10 +580,12 @@ button:hover {
 	margin-bottom: 0.8rem;
 }
 
+/* I keep these images hidden on mobile because the text matters more there and the extra images would make the page feel too busy. */
 .mission-story-img {
 	display: none;
 }
 
+/* This limits the impact section width so the cards do not stretch too wide on large screens. */
 .impact-stats.container {
 	max-width: 980px;
 	padding-inline: 1rem;
@@ -534,6 +600,7 @@ button:hover {
 	padding: 0;
 }
 
+/* I made these cards pill-shaped so the impact numbers feel a bit more visual and less like regular text boxes. */
 .impact-inner {
 	position: relative;
 	background: var(--card-blue-strong);
@@ -544,6 +611,7 @@ button:hover {
 	align-items: center;
 }
 
+/* The icon is absolutely positioned so it stays in the same spot no matter how the text wraps. */
 .impact-icon {
 	position: absolute;
 	left: 1.2rem;
@@ -555,6 +623,7 @@ button:hover {
 	text-align: center;
 }
 
+/* For these headings I went back to the readable font so the stat titles stay easy to scan. */
 .impact-text h3 {
 	color: #111;
 	font-family: var(--text-font);
@@ -567,9 +636,11 @@ button:hover {
 	font-size: 0.96rem;
 }
 
-/* =========================
-   CONTACT PAGE
-========================= */
+/**************** 
+	CONTACT PAGE
+*****************/
+
+/* I reduced the bottom padding here a bit because the intro section is short and I did not want a huge empty gap before the form. */
 .contact-us {
 	padding-bottom: 1rem;
 }
@@ -579,6 +650,7 @@ button:hover {
 	margin-bottom: 0.8rem;
 }
 
+/* This description box visually introduces the page before the actual contact content starts. */
 .contact-us-description {
 	width: min(100%, 980px);
 	margin-inline: auto;
@@ -593,6 +665,7 @@ button:hover {
 	padding-inline: 1rem;
 }
 
+/* This row becomes a grid so the form and info section can stack on mobile and sit side by side on larger screens. */
 .contact-content .row {
 	display: grid;
 	gap: 1.2rem;
@@ -604,6 +677,7 @@ button:hover {
 	padding-right: 0;
 }
 
+/* I centered these section titles so both halves of the contact page feel balanced. */
 .header-c {
 	text-align: center;
 	margin-bottom: 0.8rem;
@@ -613,6 +687,7 @@ button:hover {
 	font-size: clamp(2.25rem, 5vw, 3.5rem);
 }
 
+/* These card wrappers help the contact form and contact details feel like two equal content areas. */
 .form-card,
 .contact-info-wrapper {
 	background: var(--surface-color);
@@ -621,6 +696,7 @@ button:hover {
 	box-shadow: var(--shadow);
 }
 
+/* I used a flex column for the form so the fields stack evenly with consistent spacing. */
 form {
 	display: flex;
 	flex-direction: column;
@@ -631,6 +707,7 @@ label {
 	font-size: 1.02rem;
 }
 
+/* These input styles give the form a softer look that fits the rest of the site instead of using harsh default form fields. */
 input,
 textarea {
 	width: 100%;
@@ -645,6 +722,7 @@ textarea {
 	resize: vertical;
 }
 
+/* This keeps the submit button and decorative paw aligned together at the bottom of the form. */
 .contact-form-actions {
 	display: flex;
 	align-items: center;
@@ -656,12 +734,14 @@ textarea {
 	width: 42px;
 }
 
+/* The text inside the contact info card is stacked in separate groups so each contact method is easier to scan. */
 .contact-info-text {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
 }
 
+/* These smaller headings stand out from the paragraph text without needing a huge font size. */
 .sub-header {
 	color: #111;
 	font-family: var(--text-font);
@@ -675,6 +755,7 @@ textarea {
 	margin: 0.5rem 0 1rem auto;
 }
 
+/* The icons are centered by default on smaller screens so the section feels balanced. */
 .social-icons {
 	display: flex;
 	justify-content: center;
@@ -686,31 +767,37 @@ textarea {
 	height: 50px;
 	object-fit: contain;
 }
-/* =========================
-   INTERACTIONS (HOVER + FOCUS)
-========================= */
+/********************************* 
+	INTERACTIONS (HOVER + FOCUS)
+**********************************/
 
+/* I added transitions here so links and buttons react smoothly instead of snapping instantly between states. */
 a,
 button {
   transition: all 0.2s ease;
 }
 
-/* =========================
-   LINKS
-========================= */
+/**************** 
+	LINKS
+*****************/
+
+/* Lowering the opacity on hover is a simple way to show that the link is interactive without changing the layout. */
 a:hover {
   opacity: 0.8;
 }
 
+/* Focus-visible is important for keyboard accessibility because it shows clearly where the user is on the page. */
 a:focus-visible {
   outline: 3px solid var(--heading-color);
   outline-offset: 3px;
   border-radius: 6px;
 }
 
-/* =========================
-   NAV LINKS (header)
-========================= */
+/**************** 
+	NAV LINKS (header)
+*****************/
+
+/* Header links get the button color on hover so they feel more tied into the main color palette. */
 .site-nav a:hover {
   color: var(--button-color);
 }
@@ -719,15 +806,18 @@ a:focus-visible {
   outline: 3px solid var(--button-color);
 }
 
-/* =========================
-   BUTTONS
-========================= */
+/**************** 
+	BUTTONS
+*****************/
+
+/* I made sure buttons use the pointer cursor so they feel interactive right away. */
 button,
 .button,
 .cta-btn {
   cursor: pointer;
 }
 
+/* The lift effect and soft shadow on hover make the buttons feel more clickable. */
 button:hover,
 .button:hover,
 .cta-btn:hover {
@@ -736,6 +826,7 @@ button:hover,
   filter: brightness(0.95);
 }
 
+/* On click, the button settles back down so it feels like it was pressed. */
 button:active,
 .button:active,
 .cta-btn:active {
@@ -743,6 +834,7 @@ button:active,
   box-shadow: none;
 }
 
+/* This makes keyboard focus very obvious, which is especially useful for forms and navigation. */
 button:focus-visible,
 .button:focus-visible,
 .cta-btn:focus-visible {
@@ -750,23 +842,28 @@ button:focus-visible,
   outline-offset: 3px;
 }
 
-/* =========================
-   CARDS (pet cards etc.)
-========================= */
+/************************* 
+	CARDS (PET CARDS ETC)
+**************************/
+
+/* I added transitions to the cards too so they can animate smoothly when hovered. */
 .pet-card,
 .card {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
+/* The hover lift gives the pet cards a little more life without being too dramatic. */
 .pet-card:hover,
 .card:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 22px rgba(0, 0, 0, 0.15);
 }
 
-/* =========================
-   IMAGES (subtle zoom)
-========================= */
+/**************** 
+	IMAGES (subtle zoom)
+*****************/
+
+/* This lets the card images zoom slightly on hover for a more polished interactive feel. */
 .pet-card img,
 .card img {
   transition: transform 0.3s ease;
@@ -776,16 +873,18 @@ button:focus-visible,
 .card:hover img {
   transform: scale(1.03);
 }
-/* =========================
-   SOCIAL ICONS
-========================= */
+/**************** 
+	SOCIAL ICONS
+*****************/
 
+/* I reset the social icon layout here to keep their spacing neat and consistent. */
 .social-icons {
   display: flex;
   gap: 0.8rem;
   align-items: center;
 }
 
+/* The white background, rounded corners, and shadow make the icons feel like clickable UI elements instead of just flat images. */
 .social-icons img {
   width: 42px;
   height: 42px;
@@ -796,24 +895,29 @@ button:focus-visible,
   transition: all 0.25s ease;
 }
 
+/* On hover I lift and scale them slightly so they feel more playful and interactive. */
 .social-icons img:hover {
   transform: translateY(-4px) scale(1.08);
   box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
 }
 
+/* This makes the click feel a little more tactile. */
 .social-icons img:active {
   transform: scale(0.95);
   box-shadow: none;
 }
 
+/* If the icons are ever wrapped in links, this makes keyboard focus visible there too. */
 .social-icons a:focus-visible img {
   outline: 3px solid var(--heading-color);
   outline-offset: 3px;
 }
 
-/* =========================
-   TABLET
-========================= */
+/******************** 
+	TABLET
+*********************/
+
+/* From this breakpoint up, I start adjusting spacing and layout so the site takes advantage of the extra width instead of just stretching the mobile version. */
 @media (min-width: 768px) {
 	main section {
 		padding: 4rem 1.5rem;
@@ -827,6 +931,7 @@ button:focus-visible,
 		width: 106px;
 	}
 
+	/* I hide the hamburger on tablet and up because the full nav fits properly at this size. */
 	.site-header {
 		position: sticky;
 	}
@@ -835,11 +940,13 @@ button:focus-visible,
 		display: none;
 	}
 
+	/* The nav is always visible from tablet upward. */
 	.site-nav {
 		display: block !important;
 		padding: 0 1.5rem 1rem;
 	}
 
+	/* I switch the nav from a stacked mobile list to a horizontal row once there is enough space. */
 	.site-nav ul {
 		flex-direction: row;
 		justify-content: flex-end;
@@ -855,6 +962,7 @@ button:focus-visible,
 		font-size: 1.25rem;
 	}
 
+	/* The footer gets a bit more breathing room here because smaller mobile spacing starts to feel cramped on tablet. */
 	.footer-container {
 		padding: 1.75rem 2rem;
 		gap: 1.75rem;
@@ -881,7 +989,7 @@ button:focus-visible,
 		font-size: 0.82rem;
 	}
 
-
+	/* The hero image gets taller on tablet so it does not feel too short across a wider screen. */
 	.hero-image img {
 		height: 460px;
 	}
@@ -891,6 +999,8 @@ button:focus-visible,
 		padding: 1.75rem 2rem;
 	}
 
+	/* Here I switch the pets section to a two-column layout.
+	   The third card spans the full row and is centered so the 3-card layout still feels balanced. */
 	.featured-pets-content.container {
 		max-width: 980px;
 	}
@@ -929,6 +1039,7 @@ button:focus-visible,
 		line-height: 1.4;
 	}
 
+	/* These home page content cards switch into a two-column layout with the heading across the top and image/text underneath. */
 	.volunteer-content,
 	.about-content {
 		display: grid;
@@ -957,6 +1068,7 @@ button:focus-visible,
 		grid-area: text;
 	}
 
+	/* The about hero is made taller here and the overlay is widened a bit so it still feels centered and readable. */
 	.about-hero img {
 		height: 470px;
 	}
@@ -967,6 +1079,7 @@ button:focus-visible,
 		padding: 1.15rem 1.75rem;
 	}
 
+	/* Story and mission become side-by-side text and image cards from tablet upward. */
 	.story-content,
 	.mission-content {
 		display: grid;
@@ -999,6 +1112,7 @@ button:focus-visible,
 		border-radius: 18px;
 	}
 
+	/* These impact cards get slightly bigger so the stat text has a bit more room to breathe. */
 	.impact-stats .row {
 		gap: 1.2rem;
 	}
@@ -1012,6 +1126,7 @@ button:focus-visible,
 		width: 38px;
 	}
 
+	/* The contact page becomes a two-column layout here so the form and contact details can sit beside each other. */
 	.contact-us-description {
 		padding: 1rem 1.25rem;
 	}
@@ -1031,14 +1146,17 @@ button:focus-visible,
 		min-height: 180px;
 	}
 
+	/* On wider screens, the social icons align left instead of staying centered. */
 	.social-icons {
 		justify-content: flex-start;
 	}
 }
 
-/* =========================
+/**********************
    DESKTOP
-========================= */
+***********************/
+
+/* At desktop width I push the layouts further so the site does not look like a stretched tablet version. */
 @media (min-width: 1100px) {
 
 	.header-top,
@@ -1066,6 +1184,7 @@ button:focus-visible,
 		font-size: 1.3rem;
 	}
 
+	/* Footer spacing and icon sizes increase slightly here to better fill the wider screen. */
 	.footer-container {
 		width: min(100%, 1240px);
 		grid-template-columns: auto 1fr auto auto;
@@ -1094,6 +1213,7 @@ button:focus-visible,
 		font-size: 0.85rem;
 	}
 
+	/* The desktop hero gets more height and a larger card so it feels proportional to the screen size. */
 	.hero-image img {
 		width: 100%;
 		height: 560px;
@@ -1134,6 +1254,7 @@ button:focus-visible,
 		align-items: center;
 	}
 
+	/* The pets section becomes a clean three-column grid at full desktop width. */
 	.featured-pets-content.container {
 		max-width: 1180px;
 	}
@@ -1169,6 +1290,7 @@ button:focus-visible,
 		line-height: 1.45;
 	}
 
+	/* These content cards stay wide but capped so they do not become awkwardly stretched across the desktop. */
 	.volunteer-content,
 	.about-content {
 		max-width: 1120px;
@@ -1201,6 +1323,7 @@ button:focus-visible,
 		height: 250px;
 	}
 
+	/* On desktop the impact cards switch into a full three-column layout instead of stacking. */
 	.impact-stats.container {
 		max-width: 1180px;
 	}
@@ -1212,7 +1335,8 @@ button:focus-visible,
 	.impact-inner {
 		min-height: 145px;
 	}
-
+	
+	/* The contact section gets more width and padding here so the layout does not look cramped. */
 	.contact-content.container {
 		max-width: 1180px;
 	}
