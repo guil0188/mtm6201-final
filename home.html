@@ -1,231 +1,256 @@
 <!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home | Happy Paws Animal Shelter</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home | Happy Paws Animal Shelter</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/main.css" />
-</head>
+  <body>
+    <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <header class="site-header">
+      <div class="header-top">
+        <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
 
-<body>
-  <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <header class="site-header">
-    <div class="header-top">
-      <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
-
-      <div class="logo">
-        <a href="home.html">
-          <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
-        </a>
-      </div>
-      <!-- This button controls the mobile menu.
+        <div class="logo">
+          <a href="home.html">
+            <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
+          </a>
+        </div>
+        <!-- This button controls the mobile menu.
              The aria attributes help screen readers understand that this button opens and closes the navigation. -->
-      <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false"
-        type="button">
-        <span>&#9776;</span>
-      </button>
-    </div>
-    <!-- I gave the nav an id so the menu button can target it in JavaScript.
+        <button
+          class="menu-toggle"
+          aria-label="Open navigation menu"
+          aria-controls="site-nav"
+          aria-expanded="false"
+          type="button"
+        >
+          <span>&#9776;</span>
+        </button>
+      </div>
+      <!-- I gave the nav an id so the menu button can target it in JavaScript.
            The aria-label gives a clearer description of what this navigation is for. -->
-    <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
-      <ul>
-        <li><a href="home.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  <!-- The id on main matches the skip link above so the user can jump directly here. -->
-  <main id="main-content">
-    <section class="hero">
-      <!-- I separated the image from the text block so I could control their spacing differently at each breakpoint. -->
-
-      <div class="hero-image">
-        <img src="images/home-page-hero.png" alt="A child and adult spending time with a cat at the shelter" />
-      </div>
-      <!-- This card-like block sits over the bottom part of the hero area and introduces the main message of the page. -->
-
-      <div class="hero-text-block">
-        <div class="section-header">
-          <h1>Find Your New Best Friend!</h1>
-        </div>
-
-        <div class="hero-content">
-          <p>
-            Every animal deserves a loving home. At Happy Paws Animal Shelter,
-            we rescue, care for, and rehome dogs and cats looking for their
-            forever families. Start your adoption journey today and meet the
-            companion who will change your life.
-          </p>
-          <!-- I grouped the call-to-action button and paw icon together so I could line them up in one row with flexbox. -->
-          <div class="hero-action">
-            <a href="contact.html" class="button-link" id="adopt-pet">Adopt a Pet</a>
-            <img src="images/cat-paw.png" alt="icon of cat paw" class="hero-paw" />
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="featured-pets">
-      <div class="section-header">
-        <h2>Featured Pets</h2>
-      </div>
-      <!-- I used a container and row here so I could keep the cards centered and then switch the layout between mobile, tablet, and desktop in CSS. -->
-
-      <div class="featured-pets-content container">
-        <div class="row">
-          <!-- Each pet is its own article because each card is a separate piece of content with its own image, heading, text, and button. -->
-
-          <article class="pet-card">
-            <img src="images/buddy.jpg" alt="Buddy the dog" />
-            <!-- The pet name and paw icon are wrapped together so they stay aligned as one small heading unit. -->
-
-            <div class="pet-name">
-              <h3>Buddy</h3>
-              <img src="images/dog-paw.png" alt="paw icon" class="pet-paw" />
-            </div>
-            <p>
-              Buddy is a playful and loving golden retriever who enjoys long
-              walks and belly rubs. He gets along well with kids and other
-              dogs and would make a wonderful addition to an active family.
-            </p>
-            <a href="#" class="button-link">View</a>
-          </article>
-          <article class="pet-card">
-            <img src="images/luna.jpg" alt="Luna the cat" />
-            <div class="pet-name">
-              <h3>Luna</h3>
-              <img src="images/cat-paw.png" alt="paw icon" class="pet-paw" />
-            </div>
-            <p>
-              Luna is a gentle and curious cat who loves cozy naps and sunny
-              windows. She enjoys quiet environments and would be the perfect
-              companion for someone looking for a calm and affectionate
-              friend.
-            </p>
-            <a href="#" class="button-link">View</a>
-          </article>
-          <article class="pet-card">
-            <img src="images/max.jpg" alt="Max the dog" />
-            <div class="pet-name">
-              <h3>Max</h3>
-              <img src="images/dog-paw.png" alt="paw icon" class="pet-paw" />
-            </div>
-            <p>
-              Max is an energetic and loyal dog who loves playing fetch and
-              exploring the outdoors. He is friendly, intelligent, and would
-              thrive in a home that enjoys walks, adventures, and plenty of
-              playtime.
-            </p>
-            <a href="#" class="button-link">View</a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="volunteer-section">
-      <!-- I turned this whole section into one main content card so the image and text feel connected instead of looking like separate blocks. -->
-      <div class="volunteer-content">
-        <div class="section-header">
-          <h2>Volunteer With Us</h2>
-        </div>
-        <img src="images/about-us-hero.png" alt="man and woman feeding dog" />
-        <!-- This text block is separate from the image so it can stack on mobile and sit beside the image on wider screens. -->
-
-        <div class="volunteer-text">
-          <p>
-            Our volunteers are the heart of our shelter. From walking dogs to
-            helping at adoption events, there are many ways you can make a
-            difference in the lives of animals waiting for a home.
-          </p>
-          <!-- I put the button inside another wrapper so I had an easy target for spacing without affecting the paragraph above it. -->
-
-          <div class="section-action">
-            <a href="contact.html" class="button-link" id="volunteer">Become a Volunteer</a>
-          </div>
-        </div>
-    </section>
-
-    <section class="about-shelter">
-      <!-- This section follows the same overall structure as the volunteer section so the page keeps a consistent rhythm. -->
-
-      <div class="about-content">
-        <div class="section-header">
-          <h2>About Our Shelter</h2>
-        </div>
-        <img src="images/about-our-shelter.png" alt="kids and cats" />
-        <div class="about-text">
-          <p>
-            Happy Paws Animal Shelter has been helping animals find safe and
-            loving homes for over a decade. Our dedicated team works tirelessly
-            to rescue animals in need, provide medical care, and match them with
-            families who will give them the love they deserve.
-          </p>
-
-          <div class="section-action">
-            <a href="about.html" class="button-link" id="learn-more">Learn More</a>
-          </div>
-        </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-container">
-      <!-- These paw images help carry the branding all the way to the bottom of the page. -->
-
-      <div class="footer-left">
-        <img src="images/cat-paw.png" alt="icon of a cat paw" />
-      </div>
-      <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
-
-      <div class="footer-links">
+      <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
         <ul>
           <li><a href="home.html">Home</a></li>
-          <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
+      </nav>
+    </header>
+    <!-- The id on main matches the skip link above so the user can jump directly here. -->
+    <main id="main-content">
+      <section class="hero">
+        <!-- I separated the image from the text block so I could control their spacing differently at each breakpoint. -->
 
-        <ul>
-          <li><a href="#">Sign-up</a></li>
-          <li><a href="#">Career</a></li>
-          <li><a href="#">News</a></li>
-        </ul>
+        <div class="hero-image">
+          <img
+            src="images/home-page-hero.png"
+            alt="A child and adult spending time with a cat at the shelter"
+          />
+        </div>
+        <!-- This card-like block sits over the bottom part of the hero area and introduces the main message of the page. -->
+
+        <div class="hero-text-block">
+          <div class="section-header">
+            <h1>Find Your New Best Friend!</h1>
+          </div>
+
+          <div class="hero-content">
+            <p>
+              Every animal deserves a loving home. At Happy Paws Animal Shelter,
+              we rescue, care for, and rehome dogs and cats looking for their
+              forever families. Start your adoption journey today and meet the
+              companion who will change your life.
+            </p>
+            <!-- I grouped the call-to-action button and paw icon together so I could line them up in one row with flexbox. -->
+            <div class="hero-action">
+              <a href="contact.html" class="button-link" id="adopt-pet"
+                >Adopt a Pet</a
+              >
+              <img
+                src="images/cat-paw.png"
+                alt="icon of cat paw"
+                class="hero-paw"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-pets">
+        <div class="section-header">
+          <h2>Featured Pets</h2>
+        </div>
+        <!-- I used a container and row here so I could keep the cards centered and then switch the layout between mobile, tablet, and desktop in CSS. -->
+
+        <div class="featured-pets-content container">
+          <div class="row">
+            <!-- Each pet is its own article because each card is a separate piece of content with its own image, heading, text, and button. -->
+
+            <article class="pet-card">
+              <img src="images/buddy.jpg" alt="Buddy the dog" />
+              <!-- The pet name and paw icon are wrapped together so they stay aligned as one small heading unit. -->
+
+              <div class="pet-name">
+                <h3>Buddy</h3>
+                <img src="images/dog-paw.png" alt="paw icon" class="pet-paw" />
+              </div>
+              <p>
+                Buddy is a playful and loving golden retriever who enjoys long
+                walks and belly rubs. He gets along well with kids and other
+                dogs and would make a wonderful addition to an active family.
+              </p>
+              <a href="#" class="button-link">View</a>
+            </article>
+            <article class="pet-card">
+              <img src="images/luna.jpg" alt="Luna the cat" />
+              <div class="pet-name">
+                <h3>Luna</h3>
+                <img src="images/cat-paw.png" alt="paw icon" class="pet-paw" />
+              </div>
+              <p>
+                Luna is a gentle and curious cat who loves cozy naps and sunny
+                windows. She enjoys quiet environments and would be the perfect
+                companion for someone looking for a calm and affectionate
+                friend.
+              </p>
+              <a href="#" class="button-link">View</a>
+            </article>
+            <article class="pet-card">
+              <img src="images/max.jpg" alt="Max the dog" />
+              <div class="pet-name">
+                <h3>Max</h3>
+                <img src="images/dog-paw.png" alt="paw icon" class="pet-paw" />
+              </div>
+              <p>
+                Max is an energetic and loyal dog who loves playing fetch and
+                exploring the outdoors. He is friendly, intelligent, and would
+                thrive in a home that enjoys walks, adventures, and plenty of
+                playtime.
+              </p>
+              <a href="#" class="button-link">View</a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="volunteer-section">
+        <!-- I turned this whole section into one main content card so the image and text feel connected instead of looking like separate blocks. -->
+        <div class="volunteer-content">
+          <div class="section-header">
+            <h2>Volunteer With Us</h2>
+          </div>
+          <img src="images/about-us-hero.png" alt="man and woman feeding dog" />
+          <!-- This text block is separate from the image so it can stack on mobile and sit beside the image on wider screens. -->
+
+          <div class="volunteer-text">
+            <p>
+              Our volunteers are the heart of our shelter. From walking dogs to
+              helping at adoption events, there are many ways you can make a
+              difference in the lives of animals waiting for a home.
+            </p>
+            <!-- I put the button inside another wrapper so I had an easy target for spacing without affecting the paragraph above it. -->
+
+            <div class="section-action">
+              <a href="contact.html" class="button-link" id="volunteer"
+                >Become a Volunteer</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about-shelter">
+        <!-- This section follows the same overall structure as the volunteer section so the page keeps a consistent rhythm. -->
+
+        <div class="about-content">
+          <div class="section-header">
+            <h2>About Our Shelter</h2>
+          </div>
+          <img src="images/about-our-shelter.png" alt="kids and cats" />
+          <div class="about-text">
+            <p>
+              Happy Paws Animal Shelter has been helping animals find safe and
+              loving homes for over a decade. Our dedicated team works
+              tirelessly to rescue animals in need, provide medical care, and
+              match them with families who will give them the love they deserve.
+            </p>
+
+            <div class="section-action">
+              <a href="about.html" class="button-link" id="learn-more"
+                >Learn More</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-container">
+        <!-- These paw images help carry the branding all the way to the bottom of the page. -->
+
+        <div class="footer-left">
+          <img src="images/cat-paw.png" alt="icon of a cat paw" />
+        </div>
+        <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
+
+        <div class="footer-links">
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+
+          <ul>
+            <li><a href="#">Sign-up</a></li>
+            <li><a href="#">Career</a></li>
+            <li><a href="#">News</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-middle-right">
+          <img src="images/dog-paw.png" alt="icon of a dog paw" />
+        </div>
+        <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+
+        <div class="footer-right">
+          <img
+            src="images/logo.svg"
+            alt="Happy Paws Animal Shelter logo"
+            class="footer-logo"
+          />
+          <p>&copy; Pawsitive Futures</p>
+        </div>
       </div>
+    </footer>
+    <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
 
-      <div class="footer-middle-right">
-        <img src="images/dog-paw.png" alt="icon of a dog paw" />
-      </div>
-      <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
 
-      <div class="footer-right">
-        <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" class="footer-logo" />
-        <p>&copy; Pawsitive Futures</p>
-      </div>
-    </div>
-  </footer>
-  <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+      const menuToggle = document.querySelector(".menu-toggle");
+      const siteNav = document.querySelector(".site-nav");
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
+      menuToggle.addEventListener("click", function () {
+        // This class controls whether the mobile navigation is visible or hidden.
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const siteNav = document.querySelector(".site-nav");
+        siteNav.classList.toggle("nav-open");
 
-    menuToggle.addEventListener("click", function () {
-      // This class controls whether the mobile navigation is visible or hidden.
+        // I also update aria-expanded so assistive technology knows the button state changed.
 
-      siteNav.classList.toggle("nav-open");
-
-      // I also update aria-expanded so assistive technology knows the button state changed.
-
-      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-      menuToggle.setAttribute("aria-expanded", !isExpanded);
-    });
-  </script>
-</body>
-
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", !isExpanded);
+      });
+    </script>
+  </body>
 </html>
