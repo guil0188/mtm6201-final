@@ -887,38 +887,30 @@ textarea {
 /* =========================
    DESKTOP
 ========================= */
-@media (min-width: 768px) {
+@media (min-width: 1100px) {
+  .header-top,
+  .site-nav {
+    width: min(100%, 1240px);
+  }
+
   .header-top {
-    padding: 1rem 1.5rem 0.5rem;
-  }
-
-  .logo img {
-    width: 106px;
-  }
-
-  .menu-toggle {
-    display: none;
+    padding: 1.1rem 2rem 0.5rem;
   }
 
   .site-nav {
-    display: block;
-    padding: 0 1.5rem 1rem;
+    padding: 0 2rem 1rem;
+  }
+
+  .logo img {
+    width: 118px;
   }
 
   .site-nav ul {
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 2rem;
-    padding: 0;
-    background: transparent;
-    box-shadow: none;
-    border-radius: 0;
+    gap: 2.75rem;
   }
 
   .site-nav a {
-    color: var(--button-color);
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 }
 
@@ -1066,4 +1058,3 @@ textarea {
     width: 56px;
     height: 56px;
   }
-}
