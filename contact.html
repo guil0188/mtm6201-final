@@ -12,33 +12,34 @@
   </head>
 
   <body>
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    <header class="site-header">
-      <div class="header-top">
-        <div class="logo">
-          <a href="home.html">
-            <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
-          </a>
-        </div>
+    <!-- This link improves keyboard accessibility by letting users skip directly to the main content. -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-top">
+      <!-- I wrapped the logo in a link so clicking it always takes the user back to the home page, which is a common website pattern. -->
 
-        <button
-          class="menu-toggle"
-          aria-label="Open navigation menu"
-          aria-controls="site-nav"
-          aria-expanded="false"
-          type="button"
-        >
-          <span>&#9776;</span>
-        </button>
+      <div class="logo">
+        <a href="home.html">
+          <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" />
+        </a>
       </div>
-      <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </header>
+      <!-- This button controls the mobile menu.
+             The aria attributes help screen readers understand that this button opens and closes the navigation. -->
+      <button class="menu-toggle" aria-label="Open navigation menu" aria-controls="site-nav" aria-expanded="false"
+        type="button">
+        <span>&#9776;</span>
+      </button>
+    </div>
+    <!-- I gave the nav an id so the menu button can target it in JavaScript.
+           The aria-label gives a clearer description of what this navigation is for. -->
+    <nav class="site-nav" aria-label="Main Navigation" id="site-nav">
+      <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
     <main id="main-content">
       <section class="contact-us">
         <div class="section-header">
@@ -118,50 +119,58 @@
       </section>
     </main>
     <footer class="site-footer">
-      <div class="footer-container">
-        <div class="footer-left">
-          <img src="images/cat-paw.png" alt="icon of a cat paw" />
-        </div>
+    <div class="footer-container">
+      <!-- These paw images help carry the branding all the way to the bottom of the page. -->
 
-        <div class="footer-links">
-          <ul>
-            <li><a href="home.html">Home</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-
-          <ul>
-            <li><a href="#">Sign-up</a></li>
-            <li><a href="#">Career</a></li>
-            <li><a href="#">News</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-middle-right">
-          <img src="images/dog-paw.png" alt="icon of a dog paw" />
-        </div>
-
-        <div class="footer-right">
-          <img
-            src="images/logo.svg"
-            alt="Happy Paws Animal Shelter logo"
-            class="footer-logo"
-          />
-          <p>&copy; Pawsitive Futures</p>
-        </div>
+      <div class="footer-left">
+        <img src="images/cat-paw.png" alt="icon of a cat paw" />
       </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script>
-      const menuToggle = document.querySelector(".menu-toggle");
-      const siteNav = document.querySelector(".site-nav");
+      <!-- I split the footer links into two columns to make them easier to scan and to balance the space visually. -->
 
-      menuToggle.addEventListener("click", function () {
-        siteNav.classList.toggle("nav-open");
+      <div class="footer-links">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="about.html">About</a></li>
+        </ul>
 
-        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-        menuToggle.setAttribute("aria-expanded", !isExpanded);
-      });
-    </script>
+        <ul>
+          <li><a href="#">Sign-up</a></li>
+          <li><a href="#">Career</a></li>
+          <li><a href="#">News</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-middle-right">
+        <img src="images/dog-paw.png" alt="icon of a dog paw" />
+      </div>
+      <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+
+      <div class="footer-right">
+        <img src="images/logo.svg" alt="Happy Paws Animal Shelter logo" class="footer-logo" />
+        <p>&copy; Pawsitive Futures</p>
+      </div>
+    </div>
+  </footer>
+  <!-- The footer logo and copyright are grouped together because they act as one small branding area. -->
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // I used JavaScript here to make the mobile menu actually open and close when the hamburger icon is clicked.
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const siteNav = document.querySelector(".site-nav");
+
+    menuToggle.addEventListener("click", function () {
+      // This class controls whether the mobile navigation is visible or hidden.
+
+      siteNav.classList.toggle("nav-open");
+
+      // I also update aria-expanded so assistive technology knows the button state changed.
+
+      const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+      menuToggle.setAttribute("aria-expanded", !isExpanded);
+    });
+  </script>
   </body>
 </html>
