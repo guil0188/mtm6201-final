@@ -638,6 +638,10 @@ button {
 	margin: 0;
 }
 
+.mission-story-img {
+	display: none;
+}
+
 /****************
 	Our Mission
 *****************/
@@ -963,43 +967,45 @@ textarea {
   	Footer
   *****************/
 	.footer-container {
-	padding: 1.5rem 2rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 2rem;
-}
+		padding: 1.5rem 2rem;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 2rem;
+	}
 
-.footer-links {
-	flex-grow: 1;
-	justify-content: center;
-}
+	.footer-links {
+		flex-grow: 1;
+		justify-content: center;
+	}
 
-.footer-links a {
-	font-size: 1.5rem;
-}
-.footer-links ul {
-	gap: 1rem;
-}
+	.footer-links a {
+		font-size: 1rem;
+	}
 
-/* icons bigger */
-.footer-left img,
-.footer-middle-right img {
-	width: 55px;
-}
+	.footer-links ul {
+		gap: 1rem;
+	}
+
+	/* icons bigger */
+	.footer-left img,
+	.footer-middle-right img {
+		width: 55px;
+	}
 
 	.footer-logo {
-		width: 80px;
+		width: 55px;
 	}
 
 	.footer-right {
-	align-items: flex-end;
-}
+		align-items: flex-end;
+	}
 
-.footer-right p {
-	font-size: 0.9rem;
-	text-align: right;
-}
+	.footer-right p {
+		font-size: 0.75rem;
+		text-align: right;
+	}
+
 	/*************************
   			Home Page
   **************************/
@@ -1071,92 +1077,281 @@ textarea {
 		height: 100%;
 	}
 
-/****************
+	/****************
 	Volunteer and About Sections
 *****************/
-.volunteer-content,
-.about-content {
-  background-color: var(--content-background);
-  border-radius: 0.35rem;
-  padding: 1.5rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "title title"
-    "image text";
-  column-gap: 1.5rem;
-  row-gap: 1rem;
-  align-items: start;
-}
+	.volunteer-content,
+	.about-content {
+		background-color: var(--content-background);
+		border-radius: 0.35rem;
+		padding: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-areas:
+			"title title"
+			"image text";
+		column-gap: 1.5rem;
+		row-gap: 1rem;
+		align-items: start;
+	}
 
-.volunteer-content .section-header,
-.about-content .section-header {
-  grid-area: title;
-  text-align: center;
-  margin-bottom: 0;
-}
+	.volunteer-content .section-header,
+	.about-content .section-header {
+		grid-area: title;
+		text-align: center;
+		margin-bottom: 0;
+	}
 
-.volunteer-content img,
-.about-content img {
-  grid-area: image;
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  border-radius: 0.35rem;
-}
+	.volunteer-content img,
+	.about-content img {
+		grid-area: image;
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+		border-radius: 0.35rem;
+	}
 
-.volunteer-text,
-.about-text {
-  grid-area: text;
-  width: 100%;
-}
+	.volunteer-text,
+	.about-text {
+		grid-area: text;
+		width: 100%;
+	}
 
-.volunteer-text p,
-.about-text p {
-  font-size: 1rem;
-  line-height: 1.45;
-  text-align: left;
-  margin-bottom: 1.25rem;
-}
+	.volunteer-text p,
+	.about-text p {
+		font-size: 1rem;
+		line-height: 1.45;
+		text-align: left;
+		margin-bottom: 1.25rem;
+	}
 
-	
+
 
 	/****************
   	About Page
-  *****************/
+*****************/
+	.about-hero {
+		padding: 0;
+	}
+
+	.about-hero img {
+		width: 100%;
+		height: 420px;
+		object-fit: cover;
+	}
+
 	.about-hero-overlay {
-		width: 55%;
-		top: 55%;
+		width: 50%;
+		top: 52%;
+		padding: 1rem 1.75rem;
+		border-radius: 1rem;
 	}
 
 	.about-hero-overlay h1 {
-		font-size: 3.5rem;
+		font-size: 3.8rem;
+		line-height: 1.05;
+	}
+
+	.our-story,
+	.our-mission {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	.our-story h2,
+	.our-mission h2 {
+		font-size: 3rem;
 	}
 
 	.story-content,
 	.mission-content {
-		padding: 1.25rem 1.5rem;
+		display: grid;
+		grid-template-columns: 1.2fr 0.8fr;
+		grid-template-areas:
+			"title title"
+			"text image";
+		column-gap: 1.5rem;
+		row-gap: 1rem;
+		align-items: center;
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 1.5rem 1.75rem;
+		border-radius: 0.75rem;
+	}
+
+	.story-content .section-header,
+	.mission-content .section-header {
+		grid-area: title;
+		text-align: center;
+		margin-bottom: 0;
+	}
+
+
+	.story-content p,
+	.mission-content p {
+		grid-area: text;
+		font-size: 1.05rem;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	.mission-story-img {
+		display: block;
+		grid-area: image;
+		width: 100%;
+		height: 220px;
+		object-fit: cover;
+		border-radius: 0.75rem;
+	}
+
+	/* impact section */
+	.our-impact {
+		padding: 1.5rem 1rem 2.5rem;
+	}
+
+	.our-impact h2 {
+		font-size: 3rem;
+	}
+
+	.impact-stats.container {
+		max-width: 760px;
+		padding-left: 0;
+		padding-right: 0;
 	}
 
 	.impact-stats .row {
-		row-gap: 1.25rem;
+		row-gap: 1.4rem;
+	}
+
+	.impact-inner {
+		min-height: 120px;
+		padding: 1.35rem 1.75rem;
+	}
+
+	.impact-icon {
+		width: 46px;
+		left: 1.4rem;
+	}
+
+	.impact-text h3 {
+		font-size: 1.45rem;
+	}
+
+	.impact-text p {
+		font-size: 1.05rem;
+		line-height: 1.35;
 	}
 
 	/****************
   	Contact Page
   *****************/
+	.contact-us {
+		padding: 1.25rem 1rem 1rem;
+	}
+
+	.contact-us h1 {
+		font-size: 3.2rem;
+	}
+
+	.contact-us-description {
+		max-width: 900px;
+		margin: 0 auto;
+		padding: 1rem 1.25rem;
+	}
+
+	.contact-us-description p {
+		font-size: 1.1rem;
+		line-height: 1.45;
+	}
+
+	.contact-content.container {
+		max-width: 950px;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
 	.contact-content .row {
-		row-gap: 1.5rem;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1.5rem;
+		align-items: start;
+	}
+
+	.contact-form-container,
+	.contact-info {
+		width: 100%;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	.header-c {
+		margin-bottom: 0.75rem;
+	}
+
+	.header-c h2 {
+		font-size: 3rem;
 	}
 
 	.form-card,
 	.contact-info-wrapper {
-		padding: 1.25rem 1.25rem 1.4rem;
+		padding: 1.5rem;
+		border-radius: 0.75rem;
+	}
+
+	form {
+		gap: 1.1rem;
+	}
+
+	label {
+		font-size: 1.05rem;
 	}
 
 	input,
 	textarea {
 		font-size: 1rem;
+		padding: 0.7rem 0.9rem;
+	}
+
+	textarea {
+		min-height: 160px;
+	}
+
+	.contact-form-actions {
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+
+	.contact-form-actions .button-link {
+		padding: 0.8rem 1.8rem;
+		font-size: 1rem;
+	}
+
+	.form-paw {
+		width: 52px;
+	}
+
+	.sub-header {
+		font-size: 1.4rem;
+	}
+
+	.contact-info-text p {
+		font-size: 1.05rem;
+		line-height: 1.45;
+	}
+
+	.contact-info-paw {
+		width: 70px;
+		margin: 1rem 0 1rem auto;
+	}
+
+	.social-icons {
+		justify-content: flex-start;
+		gap: 1rem;
+	}
+
+	.social-icons img {
+		width: 54px;
+		height: 54px;
 	}
 }
 
@@ -1231,6 +1426,25 @@ textarea {
 		font-size: 4rem;
 	}
 
+	/* story + mission cards with images on desktop */
+	.story-content,
+	.mission-content {
+		max-width: 1000px;
+		grid-template-columns: 1.3fr 0.7fr;
+		column-gap: 2rem;
+		padding: 1.75rem 2rem;
+	}
+
+	.story-content p,
+	.mission-content p {
+		font-size: 1.1rem;
+		line-height: 1.6;
+	}
+
+	.mission-story-img {
+		height: 260px;
+	}
+
 	.impact-stats.container {
 		max-width: 1100px;
 	}
@@ -1252,19 +1466,55 @@ textarea {
 	/****************
   	Contact Page
   *****************/
+	.contact-us {
+		padding: 1.5rem 1rem 1rem;
+	}
+
+	.contact-us h1 {
+		font-size: 3.8rem;
+	}
+
+	.contact-us-description {
+		max-width: 1100px;
+	}
+
 	.contact-content.container {
 		max-width: 1100px;
 	}
 
 	.contact-content .row {
-		display: flex;
-		flex-wrap: nowrap;
-		gap: 1.5rem;
+		grid-template-columns: 1fr 1fr;
+		gap: 2rem;
 	}
 
-	.contact-form-container,
-	.contact-info {
-		width: 50%;
+	.header-c h2 {
+		font-size: 3.4rem;
+	}
+
+	.form-card,
+	.contact-info-wrapper {
+		padding: 1.75rem;
+	}
+
+	textarea {
+		min-height: 180px;
+	}
+
+	.contact-form-actions .button-link {
+		font-size: 1.05rem;
+	}
+
+	.form-paw {
+		width: 58px;
+	}
+
+	.contact-info-paw {
+		width: 78px;
+	}
+
+	.social-icons img {
+		width: 58px;
+		height: 58px;
 	}
 }
 
